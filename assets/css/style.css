@@ -1,0 +1,2449 @@
+/* ==========================================================================
+   ANKAR ATELIER - LUXURY SOFA & BESPOKE LIVING
+   Design System Inspired by ankar.ai (Precision, Minimalist & Architectural)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Ankar Color Tokens */
+  --bg-page: #f6f8fb;
+  --bg-card: #ffffff;
+  --bg-muted: #eef2f6;
+  --bg-dark: #0a1128;
+  --bg-subtle: #f0f4f8;
+
+  --border-light: #e1e7ec;
+  --border-hairline: rgba(13, 29, 74, 0.12);
+  --border-active: #0d1d4a;
+
+  --text-main: #0d1d4a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-on-dark: #ffffff;
+
+  --accent-orange: #ff7e2e;
+  --accent-amber: #d97706;
+  --accent-cognac: #9a5b32;
+  --accent-navy: #182553;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-mono: 'Space Mono', 'Fragment Mono', monospace;
+
+  /* Transitions & Shadows */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-card: 0 10px 30px -10px rgba(13, 29, 74, 0.07);
+  --shadow-pop: 0 20px 45px -15px rgba(13, 29, 74, 0.15);
+  --ease-ankar: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Global Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Ankar Typography Utility */
+.font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.label-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--bg-muted);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+}
+
+.label-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-orange);
+}
+
+/* ==========================================================================
+   FLOATING PILL NAVBAR (CLONE Y CHANG THEO ẢNH ANKAR.AI)
+   ========================================================================== */
+.ankar-nav-wrapper {
+  position: sticky;
+  top: 14px;
+  z-index: 1000;
+  width: 100%;
+  padding: 0 20px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.ankar-nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 6px 8px 6px 24px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 9999px; /* full capsule pill y hệt ảnh */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ankar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ankar-logo-symbol {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ankar-logo-text {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: -0.03em;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.ankar-logo-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  text-transform: uppercase;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.ankar-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.ankar-nav-links a {
+  font-family: var(--font-mono); /* Chuẩn font monospace theo ảnh */
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #262626;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.ankar-nav-links a:hover,
+.ankar-nav-links a.active {
+  color: #000000;
+  font-weight: 700;
+}
+
+.ankar-nav-links a.active::after {
+  display: none;
+}
+
+.ankar-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Nút Book a Demo dạng viên thuốc bo tròn màu đen nguyên bản */
+.btn-ankar-pill-action {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn-ankar-pill-action:hover {
+  background: #262626;
+  border-color: #262626;
+  transform: scale(1.02);
+}
+
+
+.btn-ankar-primary:hover {
+  background: #162a63;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(13, 29, 74, 0.2);
+}
+
+/* Announcement Top Bar */
+.top-notice-bar {
+  background: var(--bg-dark);
+  color: #cdd9e5;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 7px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.top-notice-bar span.accent {
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   ANKAR HERO SECTION (CLONE Y CHANG ẢNH ANKAR.AI VỚI ẢNH SOFA THỰC TẾ)
+   ========================================================================== */
+.hero-ankar-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0c111a;
+  background-image: url('../images/hero-luxury-sofa.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 0 24px 28px;
+  margin-top: -70px; /* Bắt đầu từ mép trên cùng của màn hình dưới thanh navbar */
+  padding-top: 88px;
+  overflow: hidden;
+}
+
+/* Lớp phủ điện ảnh tinh tế bảo đảm chữ trắng nổi bật nhưng vẫn tôn trọn vẻ đẹp của bộ sofa phòng khách */
+.hero-ankar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(180deg, 
+      rgba(9, 14, 22, 0.42) 0%, 
+      rgba(9, 14, 22, 0.28) 40%, 
+      rgba(9, 14, 22, 0.58) 75%, 
+      rgba(9, 14, 22, 0.88) 100%
+    ),
+    radial-gradient(circle at 25% 45%, rgba(9, 14, 22, 0.15) 0%, rgba(9, 14, 22, 0.65) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Các phần tử bên trong nổi lên trên lớp phủ */
+.hero-ankar-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Khối nội dung chính giữa (Body Grid) */
+.hero-ankar-body {
+  max-width: 1320px;
+  width: 100%;
+  margin: auto auto;
+  padding: 50px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Cột trái: Tiêu đề lớn phong cách Ankar Serif */
+.hero-ankar-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-ankar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.hero-ankar-badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38ef7d;
+  box-shadow: 0 0 10px #38ef7d;
+}
+
+.hero-ankar-title {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 6.4vw, 92px);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* Cột phải: Đoạn văn mô tả + Nút bấm Frosted Glass Pill */
+.hero-ankar-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.hero-ankar-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.68;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  margin-bottom: 26px;
+  max-width: 530px;
+}
+
+.hero-ankar-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Nút Frosted Glass Pill chuẩn hệt 'Explore The Platform' của Ankar */
+.btn-ankar-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 9999px;
+  padding: 12px 26px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-ankar-glass-pill:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+.btn-ankar-glass-pill.highlight-zalo {
+  background: rgba(30, 110, 240, 0.4);
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.btn-ankar-glass-pill.highlight-zalo:hover {
+  background: rgba(30, 110, 240, 0.75);
+  border-color: #ffffff;
+}
+
+/* Thanh Floating Pill đáy màn hình (Trusted by... / Đối tác / Mũi tên) - Y hệt ảnh 1 */
+.hero-ankar-bottom-pill-wrapper {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-ankar-bottom-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(12, 18, 28, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  padding: 11px 26px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.bottom-pill-intro {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-pill-intro .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38ef7d;
+  box-shadow: 0 0 8px #38ef7d;
+}
+
+.bottom-pill-logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.bottom-pill-logos span {
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.bottom-pill-logos span:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.bottom-pill-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.bottom-pill-arrow:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(2px);
+}
+
+/* Responsive Cho Hero */
+@media (max-width: 992px) {
+  .hero-ankar-container {
+    min-height: auto;
+    padding: 0 16px 24px;
+    padding-top: 84px;
+    margin-top: -70px;
+  }
+
+  .hero-ankar-body {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 0 30px;
+  }
+
+  .hero-ankar-right {
+    padding-left: 0;
+  }
+
+  .hero-ankar-bottom-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .bottom-pill-logos {
+    gap: 16px;
+  }
+}
+
+.hero-badge-info h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.hero-badge-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   CATEGORY FILTER BAR (CLONE Y CHANG THEO ẢNH USER GỬI)
+   ========================================================================== */
+.category-filter-section {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 30px 24px 20px;
+}
+
+.category-filter-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.category-filter-header h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: var(--text-main);
+  font-weight: 400;
+}
+
+.category-filter-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Hàng chứa 6 danh mục theo đúng ảnh người dùng */
+.ankar-category-bar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: var(--shadow-subtle);
+  overflow-x: auto;
+  gap: 8px;
+}
+
+.ankar-category-item {
+  flex: 1 1 0;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 10px 14px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-ankar);
+  user-select: none;
+}
+
+.ankar-category-item:hover {
+  background: var(--bg-muted);
+  border-color: rgba(13, 29, 74, 0.08);
+}
+
+/* Trạng thái được chọn giống hệt tấm ảnh (ô SOFA BỘ được bọc khung màu xám nhạt có viền) */
+.ankar-category-item.active {
+  background: #f1f4f7;
+  border: 1px solid #c9d5e1;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.cat-icon-box {
+  width: 44px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #556270;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ankar-category-item.active .cat-icon-box {
+  color: #0d1d4a;
+  transform: translateY(-2px);
+}
+
+.cat-icon-box svg {
+  width: 38px;
+  height: 30px;
+}
+
+.cat-label {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #2b3a4a;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.label-desktop {
+  display: block;
+}
+
+.label-mobile {
+  display: none;
+}
+
+.ankar-category-item.active .cat-label {
+  color: #0d1d4a;
+  font-weight: 800;
+}
+
+/* Category Quick Info Bar (Đã ẩn theo yêu cầu người dùng) */
+.category-summary-strip {
+  display: none !important;
+}
+
+/* Product Showcase Grid */
+.products-grid-section {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+}
+
+.product-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 28px;
+}
+
+.sofa-product-card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  transition: all 0.3s var(--ease-ankar);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sofa-product-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #f8fafc;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f8fafc;
+  transition: transform 0.6s var(--ease-ankar);
+}
+
+.sofa-product-card:hover .card-image-wrap img {
+  transform: scale(1.05);
+}
+
+.card-badge-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  color: var(--text-main);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+}
+
+.card-quick-actions {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.2s ease;
+}
+
+.sofa-product-card:hover .card-quick-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.2s ease;
+}
+
+.btn-icon-circle:hover {
+  background: var(--text-main);
+  color: #fff;
+}
+
+.card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-meta-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.card-specs-list {
+  display: none !important;
+}
+
+.spec-entry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spec-entry span.key {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.spec-entry span.val {
+  color: var(--text-main);
+  font-weight: 600;
+  text-align: right;
+  max-width: 60%;
+}
+
+.card-swatches-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.swatch-item {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.swatch-item:hover {
+  transform: scale(1.2);
+}
+
+.card-footer-line {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.price-box .price-current {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.price-box .price-old {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-light);
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+
+.btn-card-detail {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  background: var(--bg-muted);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-card-detail:hover {
+  background: var(--text-main);
+  color: #fff;
+  border-color: var(--text-main);
+}
+
+/* ==========================================================================
+   ANKAR ANATOMY & CRAFTSMANSHIP (EXPLORE - INVENT - PROTECT V-SERIES)
+   ========================================================================== */
+.craftsmanship-section {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 90px 24px;
+}
+
+.section-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.section-head-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.section-head-split h2 {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  line-height: 1.15;
+  color: var(--text-main);
+  font-weight: 400;
+}
+
+.section-head-split h2 em {
+  font-style: italic;
+  color: var(--accent-cognac);
+}
+
+.section-head-split p {
+  color: var(--text-muted);
+  max-width: 480px;
+  font-size: 15px;
+}
+
+.craft-tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.craft-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 24px 22px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.craft-card:hover {
+  background: #ffffff;
+  border-color: rgba(224, 86, 36, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+  transform: translateY(-3px);
+}
+
+.craft-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.craft-num {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  letter-spacing: 0.06em;
+}
+
+.craft-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.craft-card:hover .craft-icon-wrap {
+  background: var(--accent-orange);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.craft-card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.craft-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.craft-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: #f8fafc;
+  color: #334155;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.craft-card:hover .craft-chip {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.craft-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+  margin-top: auto;
+}
+
+.craft-points-list li {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.craft-points-list li:last-child {
+  margin-bottom: 0;
+}
+
+.craft-points-list li::before {
+  content: '✓';
+  color: var(--accent-orange);
+  font-family: var(--font-mono);
+  font-weight: 800;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+/* Backward compatibility for other pages */
+.craft-features-list {
+  list-style: none;
+  border-top: 1px solid var(--border-light);
+  padding-top: 14px;
+  margin-top: auto;
+}
+
+.craft-features-list li {
+  font-size: 13px;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.craft-features-list li::before {
+  content: '✓';
+  color: var(--accent-orange);
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+/* Living Spaces & Case Studies */
+.cases-section {
+  padding: 90px 24px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.cases-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.case-card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-image {
+  height: 240px;
+  position: relative;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-content {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.case-loc {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.case-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.case-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.case-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.case-author-info .name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.case-author-info .role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cases-carousel-nav {
+  display: none;
+}
+
+/* Certifications / Trust Center - Ảnh Nền Thợ Đóng Mộc Tại Xưởng */
+.trust-section {
+  position: relative;
+  background-color: #0c121f;
+  background-image: linear-gradient(rgba(10, 15, 26, 0.82), rgba(10, 15, 26, 0.88)), url('../images/xuong-dong-moc-sofa.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 100px 24px;
+  overflow: hidden;
+}
+
+.trust-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.trust-head h2 {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.trust-head p {
+  color: #cbd5e1;
+  font-size: 14.5px;
+  margin-top: 10px;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   3D COVERFLOW CHO KHỐI CAM KẾT (Ảnh 1 theo kiểu Ảnh 2)
+   ========================================================================== */
+.trust-coverflow-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  touch-action: pan-y;
+  padding: 10px 0 20px;
+  z-index: 2;
+}
+
+.trust-coverflow-stage:active {
+  cursor: grabbing;
+}
+
+.trust-coverflow-track {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-coverflow-card {
+  position: absolute;
+  width: 390px;
+  max-width: 86vw;
+  height: 330px;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 22px;
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.6s ease,
+              border-color 0.6s ease,
+              filter 0.6s ease;
+  will-change: transform, opacity;
+  cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.trust-coverflow-card.active-center {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(224, 86, 36, 0.55);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 35px rgba(224, 86, 36, 0.18);
+}
+
+.trust-coverflow-card .code {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.trust-coverflow-card h4 {
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.trust-coverflow-card p {
+  font-size: 14px;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.trust-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 5;
+}
+
+.trust-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.trust-arrow-btn:hover {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+  transform: scale(1.08);
+}
+
+.trust-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.trust-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.trust-dot.active {
+  width: 28px;
+  background: var(--accent-orange);
+  box-shadow: 0 0 10px rgba(224, 86, 36, 0.5);
+}
+
+@media (max-width: 768px) {
+  /* Thanh Danh Mục 1 Dòng Ngang Vừa Vặn Trọn Vẹn Cả 5 Mục Trên Mobile */
+  .category-filter-section {
+    padding: 0 8px !important;
+  }
+
+  .ankar-category-bar {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    padding: 6px 3px !important;
+    gap: 3px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .ankar-category-item {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: 20% !important;
+    padding: 7px 2px 5px !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid transparent !important;
+  }
+
+  .ankar-category-item.active {
+    background: #f1f4f7 !important;
+    border-color: #c9d5e1 !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .cat-icon-box {
+    width: 26px !important;
+    height: 20px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .cat-icon-box svg {
+    width: 24px !important;
+    height: 18px !important;
+  }
+
+  .cat-label {
+    font-size: 8.5px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow: hidden !important;
+    min-height: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .label-desktop {
+    display: none !important;
+  }
+
+  .label-mobile {
+    display: block !important;
+    font-size: 8.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.15 !important;
+  }
+
+  .trust-coverflow-track {
+    height: 350px;
+  }
+  .trust-coverflow-card {
+    width: 310px;
+    height: 310px;
+    border-radius: 18px;
+    padding: 24px 20px;
+  }
+  .trust-coverflow-card .code {
+    font-size: 10.5px;
+    margin-bottom: 10px;
+  }
+  .trust-coverflow-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .trust-coverflow-card p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-coverflow-track {
+    height: 340px;
+  }
+  .trust-coverflow-card {
+    width: 285px;
+    height: 300px;
+    padding: 20px 18px;
+  }
+}
+
+/* Consultation & Quote Booking Form Section */
+.customizer-section {
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 0 24px;
+}
+
+.customizer-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: var(--shadow-card);
+}
+
+.customizer-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.customizer-head h2 {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  color: var(--text-main);
+  font-weight: 400;
+}
+
+.customizer-head p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.customizer-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-control {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-page);
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--border-active);
+  background: #ffffff;
+}
+
+/* Footer (Ankar Grid Layout) */
+.ankar-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  padding: 80px 24px 30px;
+}
+
+.footer-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.footer-map-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-top: 14px;
+  max-width: 320px;
+}
+
+.footer-col h5 {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  color: var(--text-main);
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul a {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-col ul a:hover {
+  color: var(--text-main);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-light);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   MODAL POPUP (QUICK VIEW PRODUCT & SPECS)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 17, 40, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.3s var(--ease-ankar);
+}
+
+.modal-overlay.open .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--text-main);
+  color: #fff;
+}
+
+.modal-inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 36px;
+}
+
+.modal-gallery-pane img {
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+}
+
+.modal-details-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toast alert */
+.ankar-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--text-main);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-pop);
+  z-index: 2000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s var(--ease-ankar);
+}
+
+.ankar-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   ZALO CTA & FLOATING HOTLINE WIDGET
+   ========================================================================== */
+.btn-zalo-cta {
+  background: #0068ff !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: 1px solid #0056d6 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;
+  transition: all 0.2s var(--ease-ankar);
+  box-shadow: 0 4px 14px rgba(0, 104, 255, 0.25);
+}
+
+.btn-zalo-cta:hover {
+  background: #0056d6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 104, 255, 0.35);
+}
+
+/* ==========================================================================
+   FLOATING CONTACT CORNER (CHỈ 2 NÚT TRÒN NỔI 3D TINH GỌN, KHÔNG CHE CHỮ)
+   ========================================================================== */
+.floating-contact-corner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.floating-fab-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-fab-item:hover {
+  transform: scale(1.1);
+}
+
+/* Biểu tượng nút tròn nổi khối 3D xúc giác (Tactile 3D Emboss) */
+.fab-icon-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  border: 2px solid #ffffff;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.18),
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fab-zalo .fab-icon-btn {
+  background: linear-gradient(135deg, #1b84ff 0%, #0068ff 100%);
+  color: #ffffff;
+}
+
+.fab-hotline .fab-icon-btn {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  color: #ffffff;
+}
+
+.floating-fab-item:hover .fab-icon-btn {
+  box-shadow: 
+    0 12px 28px rgba(0, 0, 0, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Vòng sóng radar tỏa ra nhẹ nhàng thông báo trạng thái online */
+.fab-radar {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 104, 255, 0.45);
+  animation: fabRadarPulse 2.4s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.fab-hotline .fab-radar {
+  border-color: rgba(225, 29, 72, 0.45);
+  animation-delay: 1.2s;
+}
+
+@keyframes fabRadarPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero-content h1 {
+    font-size: 42px;
+  }
+  .craft-tabs-grid {
+    grid-template-columns: 1fr;
+  }
+  .cases-slider {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    gap: 16px !important;
+    padding: 10px 16px 20px 16px !important;
+    margin: 0 -16px !important;
+    scroll-behavior: smooth !important;
+  }
+  .cases-slider::-webkit-scrollbar {
+    display: none !important;
+  }
+  .case-card {
+    flex: 0 0 85% !important;
+    min-width: 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: center !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07) !important;
+    background: #ffffff !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  }
+  .case-image {
+    height: 210px !important;
+  }
+  .cases-carousel-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    margin-top: 14px !important;
+  }
+  .cases-nav-arrow {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    border: 1px solid var(--border-light, #e2e8f0) !important;
+    color: var(--text-main, #0f172a) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    transition: all 0.2s ease !important;
+    padding: 0 !important;
+  }
+  .cases-nav-arrow:active {
+    background: #f1f5f9 !important;
+    transform: scale(0.94) !important;
+  }
+  .cases-dots {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .cases-dot {
+    width: 8px !important;
+    height: 8px !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    background: #cbd5e1 !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  .cases-dot.active {
+    width: 24px !important;
+    border-radius: 12px !important;
+    background: var(--accent-orange, #c25420) !important;
+  }
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal-inner-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ankar-nav-links {
+    display: none;
+  }
+  .hero-content h1 {
+    font-size: 34px;
+  }
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+  }
+  .customizer-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-arrow-btn {
+    display: none;
+  }
+  .trust-card {
+    flex: 0 0 82vw;
+    min-width: 260px;
+    padding: 22px 18px;
+    scroll-snap-align: center;
+  }
+  .trust-card h4 {
+    font-size: 17px;
+  }
+  .trust-card p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Responsive 2 Cột Chuẩn E-Commerce Cho Điện Thoại */
+  .products-grid-section {
+    padding: 16px 12px 60px;
+  }
+  .product-cards-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .sofa-product-card {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .card-image-wrap {
+    height: 155px !important;
+  }
+  .card-badge-top {
+    top: 6px;
+    left: 6px;
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+  .card-quick-actions {
+    display: none;
+  }
+  .card-body {
+    padding: 10px 8px !important;
+  }
+  .card-meta-line {
+    font-size: 10px !important;
+    margin-bottom: 4px !important;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  .card-meta-line span:last-child {
+    display: none;
+  }
+  .card-title {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 35px;
+  }
+  .card-footer-line {
+    padding-top: 6px !important;
+    border-top: none !important;
+  }
+  .btn-zalo-cta {
+    padding: 8px 6px !important;
+    font-size: 12px !important;
+    gap: 4px !important;
+  }
+  .btn-zalo-cta svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-cards-container {
+    gap: 10px !important;
+  }
+  .card-image-wrap {
+    height: 130px !important;
+  }
+  .card-body {
+    padding: 8px 6px !important;
+  }
+  .card-title {
+    font-size: 12px !important;
+    min-height: 32px;
+  }
+  .btn-zalo-cta {
+    padding: 7px 4px !important;
+    font-size: 11px !important;
+  }
+}
+
+
+/* ==========================================================================
+   DẤU THOÁT RA NGOÀI TRANG (EXIT / BACK ICON BUTTON)
+   Thiết kế biểu tượng tròn tinh giản, sang trọng, không cần chữ
+   ========================================================================== */
+.page-exit-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1002;
+}
+
+.page-exit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #0f172a;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.page-exit-btn svg {
+  color: #1e293b;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+
+.page-exit-btn:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+}
+
+.page-exit-btn:hover svg {
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+.page-exit-btn:active {
+  transform: scale(0.96);
+}
+
+/* Nút thoát trong luồng trang (In-page Exit Badge) */
+.inpage-exit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 15px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.inpage-exit-badge:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  transform: translateX(-3px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.inpage-exit-badge svg {
+  transition: transform 0.2s ease;
+}
+
+.inpage-exit-badge:hover svg {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 992px) {
+  .page-exit-wrapper {
+    top: 14px;
+    left: 14px;
+  }
+  .page-exit-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .page-exit-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-exit-wrapper {
+    top: 12px;
+    left: 12px;
+  }
+  .page-exit-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .page-exit-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   3D COVERFLOW SLIDER (Chuẩn 3D xoay vòng, vuốt lướt mượt mà như ảnh mẫu)
+   ========================================================================== */
+.coverflow-stage {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 20px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.coverflow-stage:active {
+  cursor: grabbing;
+}
+
+.coverflow-track {
+  position: relative;
+  width: 100%;
+  height: 530px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverflow-card {
+  position: absolute;
+  width: 400px;
+  max-width: 86vw;
+  height: 485px;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.6s ease,
+              filter 0.6s ease;
+  will-change: transform, opacity;
+  cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.coverflow-card.active-center {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(224, 86, 36, 0.12);
+  border-color: rgba(224, 86, 36, 0.25);
+}
+
+.cf-card-media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cf-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.coverflow-card:hover .cf-card-media img {
+  transform: scale(1.05);
+}
+
+.cf-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.cf-card-content {
+  padding: 22px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cf-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cf-card-header h3 {
+  font-size: 19px;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.cf-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.coverflow-card.active-center .cf-icon-wrap {
+  background: var(--accent-orange);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Coverflow Navigation Buttons */
+.coverflow-nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coverflow-arrow-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.coverflow-arrow-btn:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+}
+
+.coverflow-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.coverflow-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cf-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #cbd5e1;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.cf-dot.active {
+  width: 32px;
+  background: var(--accent-orange);
+  box-shadow: 0 2px 8px rgba(224, 86, 36, 0.4);
+}
+
+.coverflow-controls .mobile-prev,
+.coverflow-controls .mobile-next {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .coverflow-nav-desktop {
+    display: none;
+  }
+  .coverflow-controls .mobile-prev,
+  .coverflow-controls .mobile-next {
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverflow-track {
+    height: 470px;
+  }
+  .coverflow-card {
+    width: 310px;
+    height: 440px;
+    border-radius: 18px;
+  }
+  .cf-card-media {
+    height: 160px;
+  }
+  .cf-card-content {
+    padding: 16px 16px 14px;
+  }
+  .cf-card-header h3 {
+    font-size: 16.5px;
+  }
+  .cf-card-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coverflow-track {
+    height: 450px;
+  }
+  .coverflow-card {
+    width: 285px;
+    height: 420px;
+  }
+  .cf-card-media {
+    height: 145px;
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bộ Sưu Tập Sofa | XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅ (0985.451.396 - 0784.991.888)</title>
+  <meta name="description" content="Danh mục đầy đủ các mẫu Sofa chữ L (Sofa góc), Sofa đơn, Ghế thư giãn, Ghế tân cổ điển, và Mẫu đệm của XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅. Hotline: 0985.451.396 - 0784.991.888.">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261024_10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Dấu Thoát Ra Ngoài Trang (Chỉ Biểu Tượng Gọn Gàng) -->
+    <!-- Dấu Thoát Ra Ngoài Trang (Chỉ Biểu Tượng Gọn Gàng) -->
+  <div class="page-exit-wrapper">
+    <a href="index.html" class="page-exit-btn" onclick="handlePageExit(event)" title="Thoát ra ngoài">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Filter Section (Includes the 6-Category Bar) -->
+  <section class="category-filter-section" style="padding-top: 40px;">
+    <div class="ankar-category-bar" id="ankarCategoryBar"></div>
+  </section>
+
+  <!-- Filter & Search Toolbar -->
+  <div style="max-width: 1360px; margin: 0 auto; padding: 0 24px 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">LỌC NHANH:</span>
+      <button class="btn-ankar-secondary" id="btnFilterAll" style="padding: 6px 14px; font-size: 12px;">Tất Cả Sản Phẩm</button>
+      <button class="btn-ankar-secondary" id="btnFilterLeather" style="padding: 6px 14px; font-size: 12px;">Da Bò Ý</button>
+      <button class="btn-ankar-secondary" id="btnFilterFabric" style="padding: 6px 14px; font-size: 12px;">Vải Bouclé / Nỉ</button>
+    </div>
+
+    <div style="position: relative; width: 280px;">
+      <input type="text" id="catalogSearchInput" class="form-control" placeholder="Tìm tên mẫu, mã sản phẩm..." style="padding: 8px 12px; font-size: 13px;">
+    </div>
+  </div>
+
+  <!-- Products Grid -->
+  <section class="products-grid-section">
+    <div class="product-cards-container" id="productsGridContainer"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ankar-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="ankar-logo">
+            <div class="ankar-logo-symbol">🇻🇳</div>
+            <div class="ankar-logo-text">
+              XƯỞNG SẢN XUẤT SOFA ✅
+              <span class="ankar-logo-sub">Gia Công Trực Tiếp Tại Xưởng</span>
+            </div>
+          </div>
+          <p>
+            Chuyên sản xuất và may đo sofa cao cấp. Nhận đặt hàng mọi kích thước và kiểu dáng.
+          </p>
+          <div style="margin-top: 14px; font-family: var(--font-mono); font-size: 12.5px; line-height: 1.8;">
+            <div>Hotline 1 ❤️: <strong>0985.451.396</strong></div>
+            <div>Hotline 2 ❤️: <strong>0784.991.888</strong></div>
+            <div style="margin-top: 4px;">
+              <strong>Địa chỉ xưởng:</strong> 
+              <a href="https://www.google.com/maps/search/?api=1&query=30%2F56+ng%C3%B5+27+%C4%91%C6%B0%E1%BB%9Dng+T%C3%A2y+M%E1%BB%97%2C+T%C3%A2y+M%E1%BB%97%2C+Nam+T%E1%BB%AB+Li%C3%AAm%2C+H%C3%A0+N%E1%BB%99i" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;" title="Bấm để mở chỉ đường Google Maps">
+                30/56 ngõ 27 đường Tây Mỗ - phường Tây Mỗ - Nam Từ Liêm - Hà Nội
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=30%2F56+ng%C3%B5+27+%C4%91%C6%B0%E1%BB%9Dng+T%C3%A2y+M%E1%BB%97%2C+T%C3%A2y+M%E1%BB%97%2C+Nam+T%E1%BB%AB+Li%C3%AAm%2C+H%C3%A0+N%E1%BB%99i" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px; margin-left: 6px; padding: 2px 7px; background: #fee2e2; color: #dc2626; border-radius: 4px; font-size: 11px; font-weight: 700; text-decoration: none; vertical-align: middle;">
+                Google Maps ↗
+              </a>
+            </div>
+            <!-- Ảnh Bản Đồ Google Maps Dẫn Đường -->
+            <div style="margin-top: 14px; max-width: 480px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: 0 4px 14px rgba(0,0,0,0.06); position: relative;">
+              <a href="https://www.google.com/maps/search/?api=1&query=30%2F56+ng%C3%B5+27+%C4%91%C6%B0%E1%BB%9Dng+T%C3%A2y+M%E1%BB%97%2C+T%C3%A2y+M%E1%BB%97%2C+Nam+T%E1%BB%AB+Li%C3%AAm%2C+H%C3%A0+N%E1%BB%99i" target="_blank" rel="noopener noreferrer" style="display: block; position: relative; text-decoration: none;" title="Bấm vào để mở Google Maps chỉ đường đến xưởng">
+                <img src="assets/images/google-maps-tay-mo.png" alt="Bản đồ vị trí Xưởng sản xuất sofa 30/56 ngõ 27 Tây Mỗ" style="width: 100%; height: 180px; object-fit: cover; display: block; transition: transform 0.3s ease;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.1) 40%, transparent 100%); pointer-events: none;"></div>
+                <div style="position: absolute; bottom: 10px; left: 10px; right: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                  <span style="font-size: 11px; font-weight: 600; color: #ffffff; background: rgba(0, 0, 0, 0.65); padding: 4px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
+                    📍 30/56 Ngõ 27 Tây Mỗ
+                  </span>
+                  <span style="font-size: 11.5px; font-weight: 700; color: #ffffff; background: #dc2626; padding: 4px 10px; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px; box-shadow: 0 2px 6px rgba(220, 38, 38, 0.4);">
+                    Mở Google Maps ↗
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Tư Vấn Zalo 24/7</h5>
+          <ul>
+            <li><a href="https://zalo.me/0985451396" target="_blank">Chat Zalo: 0985.451.396 ❤️</a></li>
+            <li><a href="https://zalo.me/0784991888" target="_blank">Chat Zalo: 0784.991.888 ❤️</a></li>
+            <li><a href="contact.html">Đăng Ký Ghé Thăm Xưởng</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div>© 2026 XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅. ALL RIGHTS RESERVED.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Corner (Chỉ 2 Icon Tròn Nổi 3D Tinh Gọn, Không Che Chữ) -->
+  <div class="floating-contact-corner" id="floatingContactCorner">
+    <a href="https://zalo.me/0985451396" target="_blank" rel="noopener noreferrer" class="floating-fab-item fab-zalo" title="Tư Vấn Zalo: 0985.451.396 ❤️">
+      <div class="fab-icon-btn">
+        <span class="fab-radar"></span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.03L5 22l4.24-1.41C10.15 20.84 11.06 21 12 21c5.52 0 10-4.03 10-9s-4.48-10-10-10zm-1.5 13.5h-3V14l2.16-3.5H7.5V9h4v1.5L9.34 14h2.16v1.5zm3.5 0h-1.5V9H14v6.5zm3.5 0h-3V9h1.5v5h1.5v1.5z"/>
+        </svg>
+      </div>
+    </a>
+    <a href="tel:0784991888" class="floating-fab-item fab-hotline" title="Gọi Hotline: 0784.991.888 ❤️">
+      <div class="fab-icon-btn">
+        <span class="fab-radar"></span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- Quick View Modal Popup -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      <div class="modal-inner-grid" id="modalContentPane"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js?v=20261024_10"></script>
+  <script src="assets/js/main.js?v=20261024_10"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("catalogSearchInput");
+      const btnAll = document.getElementById("btnFilterAll");
+      const btnLeather = document.getElementById("btnFilterLeather");
+      const btnFabric = document.getElementById("btnFilterFabric");
+
+      if (searchInput) {
+        searchInput.addEventListener("input", function() {
+          const val = this.value.toLowerCase().trim();
+          const items = document.querySelectorAll(".sofa-product-card");
+          items.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(val) ? "flex" : "none";
+          });
+        });
+      }
+
+      if (btnAll) {
+        btnAll.addEventListener("click", () => {
+          document.querySelectorAll(".ankar-category-item").forEach(el => el.classList.remove("active"));
+          const firstCat = document.querySelector(".ankar-category-item");
+          if (firstCat) {
+            firstCat.classList.add("active");
+            firstCat.click();
+          }
+        });
+      }
+
+      if (btnLeather) {
+        btnLeather.addEventListener("click", () => {
+          const cards = document.querySelectorAll(".sofa-product-card");
+          cards.forEach(card => {
+            card.style.display = card.innerText.includes("Da") ? "flex" : "none";
+          });
+        });
+      }
+
+      if (btnFabric) {
+        btnFabric.addEventListener("click", () => {
+          const cards = document.querySelectorAll(".sofa-product-card");
+          cards.forEach(card => {
+            card.style.display = (card.innerText.includes("Vải") || card.innerText.includes("Nỉ") || card.innerText.includes("Bouclé")) ? "flex" : "none";
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
