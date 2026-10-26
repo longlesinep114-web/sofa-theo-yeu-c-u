@@ -1,44 +1,18 @@
 // Database sản phẩm Sofa & Nội thất - XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅
 const SOFA_DATABASE = [
+
   // 1. Sofa chữ L (Sofa góc) - 5 MẪU THỰC TẾ THEO ẢNH NGƯỜI DÙNG GỬI
-  {
-    id: "sofa-l-01-khay-go",
-    name: "Sofa Góc Chữ L Hiện Đại Tích Hợp Bàn Trà & Khay Gỗ Óc Chó",
-    code: "SOFA-L01",
-    category: "sofa-chu-l",
-    categoryName: "Sofa chữ L (Sofa góc)",
-    subtitle: "Dáng bệt bề thế, tích hợp bàn trà góc & tab gỗ để ly tách tiện lợi",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "3200 x 2200 x 780 mm (Đóng theo kích thước yêu cầu)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp (Bảng màu Nâu Đất Taupe, Be Sand, Ghi Xám...)",
-    frame: "Gỗ: Sồi, Thông, Keo sấy khô tẩm sấy công nghệ cao chống co ngót, mối mọt",
-    cushion: "Mút Việt Nam hoặc Việt Nhật (Đệm ngồi tùy chọn Có lò xo hoặc Không lò xo)",
-    badge: "MẪU BÁN CHẠY",
-    isFeatured: true,
-    image: "assets/images/sofa-l/sofa-l-01-khay-go.jpg",
-    gallery: [
-      "assets/images/sofa-l/sofa-l-01-khay-go.jpg"
-    ],
-    colors: [
-      { name: "Nâu Đất Taupe", hex: "#8c7a6b" },
-      { name: "Ghi Xám Khói", hex: "#5a5a5a" },
-      { name: "Be Cát Sang Trọng", hex: "#e5ded3" },
-      { name: "Nâu Da Bò", hex: "#7a4a2b" }
-    ],
-    description: "Mẫu sofa góc chữ L dáng bệt thư giãn tích hợp 2 cụm khay bàn trà bằng gỗ óc chó cao cấp: 1 khay bàn trà góc rộng rãi và 1 tab đầu hồi tích hợp đĩa tròn để ly cafe. Khung gỗ Sồi/Thông/Keo sấy khô kiên cố, đệm mút Việt Nam hoặc Việt Nhật tùy chọn có hoặc không có lò xo theo sở thích ngồi êm hay ngồi đầm."
-  },
   {
     id: "sofa-l-02-chan-kim-kim",
     name: "Sofa Góc Chữ L Múi Xếp Ly Chân Nẹp Inox Mạ Vàng",
-    code: "SOFA-L02",
+    code: "SOFA-L01",
     category: "sofa-chu-l",
     categoryName: "Sofa chữ L (Sofa góc)",
     subtitle: "Tựa lưng & tay vịn chần múi xếp ly phong cách Ý, chân nẹp kim loại mạ PVD vàng gold",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "3000 x 2000 x 760 mm (Sản xuất theo kích thước thực tế)",
-    material: "Chất liệu Da hoặc Nỉ tuyết nhung cao cấp (Ghi Xám Đậm, Đen Khói, Xanh Navy, Trắng Kem...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo đã xử lý tẩm sấy công nghệ cao chống ẩm mốc cong vênh",
     cushion: "Mút Việt Nam hoặc Việt Nhật nguyên khối (Đệm ngồi có lò xo hoặc không lò xo)",
     badge: "SANG TRỌNG Ý",
@@ -56,42 +30,16 @@ const SOFA_DATABASE = [
     description: "Đỉnh cao tạo hình phong cách sofa cao cấp Italia với toàn bộ tựa lưng và tay vịn được thợ lành nghề xếp ly chần múi thủ công tỉ mỉ. Phía dưới là dải chân đế nẹp inox mạ vàng PVD bóng loáng, nâng tầm mọi không gian phòng khách biệt thự."
   },
   {
-    id: "sofa-l-03-modular-hoc-go",
-    name: "Sofa Góc Chữ L Modular Múi Nổi Kèm Hộc Gỗ Khay Trà",
-    code: "SOFA-L03",
-    category: "sofa-chu-l",
-    categoryName: "Sofa chữ L (Sofa góc)",
-    subtitle: "Thiết kế module ghép linh hoạt, tay vịn múi phao bề thế tích hợp hộc tủ để đồ",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "3300 x 2100 x 750 mm (Tùy biến góc trái hoặc góc phải theo mặt bằng)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp đan sợi dày dặn, chống xù",
-    frame: "Gỗ: Sồi, Thông, Keo tự nhiên tuyển chọn, chịu tải trọng lớn",
-    cushion: "Mút Việt Nam hoặc Việt Nhật đàn hồi cao (Tùy chọn đệm ngồi có lò xo hoặc không lò xo)",
-    badge: "MODULE ĐA NĂNG",
-    isFeatured: true,
-    image: "assets/images/sofa-l/sofa-l-03-modular-hoc-go.jpg",
-    gallery: [
-      "assets/images/sofa-l/sofa-l-03-modular-hoc-go.jpg"
-    ],
-    colors: [
-      { name: "Xám Charcoal", hex: "#44474b" },
-      { name: "Ghi Sáng Hiện Đại", hex: "#7a8288" },
-      { name: "Nâu Cà Phê", hex: "#4a3b32" }
-    ],
-    description: "Bộ sofa góc chữ L dáng module hiện đại sở hữu các múi nệm phao nổi bồng bềnh cực kỳ êm ái. Điểm nhấn đặc biệt là hộc tủ phụ bằng gỗ óc chó tự nhiên tích hợp khay trà, cho phép gia chủ cất gọn sách báo và đặt ly tách vô cùng tiện lợi."
-  },
-  {
     id: "sofa-l-04-scandinavian-chan-kim",
     name: "Sofa Góc Chữ L Bắc Âu Nordic Chân Kim Loại Thanh Mảnh",
-    code: "SOFA-L04",
+    code: "SOFA-L02",
     category: "sofa-chu-l",
     categoryName: "Sofa chữ L (Sofa góc)",
     subtitle: "Dáng thanh thoát Bắc Âu, đệm 2 lớp êm ái, gầm cao thoáng dễ vệ sinh",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2800 x 1800 x 820 mm (Đặt làm may đo theo kích thước phòng khách)",
-    material: "Chất liệu Da hoặc Nỉ kháng bụi bẩn, thoáng khí",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo sấy khô đạt chuẩn xuất khẩu",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Đệm ngồi tùy chọn có lò xo hoặc không lò xo)",
     badge: "BẮC ÂU TINH TẾ",
@@ -107,31 +55,294 @@ const SOFA_DATABASE = [
     ],
     description: "Mẫu sofa góc chữ L mang ngôn ngữ thiết kế Scandinavia tối giản với hệ chân kim loại cao thanh mảnh, giúp robot hút bụi dễ dàng đi qua làm sạch sàn nhà. Tựa góc vát chéo thông minh ôm trọn lưng người ngồi."
   },
+
   {
-    id: "sofa-l-05-khung-go-tu-nhien",
-    name: "Sofa Góc Chữ L Phối Viền Khung Gỗ Tự Nhiên Tinh Xảo",
+    id: "sofa-l-03-scandinavian-goi-tron-2-mau",
+    name: "Sofa Văng Góc Chữ L Bắc Âu Kèm Gối Tròn (Tùy Chọn 2 Màu)",
+    code: "SOFA-L03",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Dáng Bắc Âu tinh tế với 2 gối tròn kê tay, chần múi đệm ngồi êm ái: Tùy chọn Xanh Teal hoặc Nâu Da Bò",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2600 x 1700 x 820 mm (May đo theo yêu cầu phòng khách)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo đã xử lý tẩm sấy công nghệ cao chống cong vênh, chân gỗ tự nhiên tiện côn",
+    cushion: "Mút Việt Nam hoặc Việt Nhật nguyên khối, đệm ngồi chần múi êm ái đàn hồi cao",
+    badge: "2 TÙY CHỌN MÀU",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-03-scandinavian-goi-tron-xanh-teal.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-03-scandinavian-goi-tron-xanh-teal.jpg",
+      "assets/images/sofa-l/sofa-l-03-scandinavian-goi-tron-nau-da-bo.jpg"
+    ],
+    colors: [
+      { name: "Xanh Teal Bắc Âu", hex: "#2b5366", image: "assets/images/sofa-l/sofa-l-03-scandinavian-goi-tron-xanh-teal.jpg" },
+      { name: "Nâu Da Bò Sang Trọng", hex: "#9a5327", image: "assets/images/sofa-l/sofa-l-03-scandinavian-goi-tron-nau-da-bo.jpg" }
+    ],
+    description: "Mẫu sofa thiết kế chuẩn phong cách Bắc Âu Scandinavian với đệm ngồi chần múi ngang êm ái và 2 gối tròn kê tay đặc trưng. Sản phẩm gồm 2 phiên bản màu sắc: Xanh Teal nhung quý phái (ảnh đại diện chính) và Nâu da bò cổ điển ấm cúng. Quý khách có thể bấm lướt xem và chuyển đổi màu sắc trực tiếp."
+  },
+  {
+    id: "sofa-l-04-goc-l-da-bo-tua-gat-gu-hien-dai",
+    name: "Sofa Góc Chữ L Hiện Đại Tựa Gật Gù Đa Nấc Da Bò Caramel",
+    code: "SOFA-L04",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Tựa đầu thông minh gật gù nâng hạ nhiều góc độ, tay vịn vát thấp thư giãn, bọc da bò màu caramel",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "3200 x 1850 x 850 mm (May đo theo yêu cầu diện tích)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, phụ kiện bản lề gật gù thép carbon chống rỉ",
+    cushion: "Mút đúc Việt Nhật nhiều tầng cao cấp kết hợp lò xo nén chống lún, đệm phao ngồi cực êm",
+    badge: "TỰA GẬT GÙ",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-04-goc-l-da-bo-tua-gat-gu-hien-dai.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-04-goc-l-da-bo-tua-gat-gu-hien-dai.jpg"
+    ],
+    colors: [
+      { name: "Da Bò Caramel", hex: "#c26d2e" },
+      { name: "Ghi Xám Đậm", hex: "#374151" },
+      { name: "Nâu Đậm Chocolate", hex: "#3b1e08" }
+    ],
+    description: "Thiết kế sofa góc L hiện đại công thái học hàng đầu cho phòng khách cao cấp. Phần tựa đầu gật gù điều chỉnh linh hoạt nhiều nấc giúp nâng đỡ cột sống cổ khi xem phim, đọc sách; góc L rộng rãi thoải mái cho cả gia đình quây quần."
+  },
+  {
+    id: "sofa-l-05-goc-l-kem-phoi-da-bo-tay-vat",
+    name: "Sofa Góc Chữ L Hiện Đại Phối 2 Màu Kem & Nâu Da Bò Tay Vát Loe",
     code: "SOFA-L05",
     category: "sofa-chu-l",
     categoryName: "Sofa chữ L (Sofa góc)",
-    subtitle: "Khung chân gỗ sồi/thông lộ diện bo viền tay vịn ấm cúng, tựa lưng nhấn rãnh chỉ",
+    subtitle: "Phối màu tinh tế kem bơ & nâu bò, tay ghế vát loe cánh én thanh thoát, kèm gối tựa Houndstooth",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "2900 x 1850 x 830 mm (May đo theo yêu cầu từng căn hộ)",
-    material: "Chất liệu Da hoặc Nỉ nhập khẩu phối hợp gỗ sồi / thông tự nhiên",
-    frame: "Gỗ: Sồi, Thông, Keo tự nhiên sấy khô, phủ sơn PU bảo vệ vân gỗ tự nhiên",
-    cushion: "Mút Việt Nam hoặc Việt Nhật chống xẹp lún (Có lò xo hoặc không lò xo)",
-    badge: "MỘC ẤM CÚNG",
+    dimensions: "3400 x 1950 x 840 mm (Sản xuất theo kích thước thực tế)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo sấy khô tẩm sấy chịu lực cao, chân kim loại sơn tĩnh điện chống xước",
+    cushion: "Hệ đệm mút Việt Nhật đàn hồi cao kết hợp lông vũ siêu êm ái, bồng bềnh tự nhiên",
+    badge: "PHỐI 2 MÀU Ý",
     isFeatured: true,
-    image: "assets/images/sofa-l/sofa-l-05-khung-go-tu-nhien.jpg",
+    image: "assets/images/sofa-l/sofa-l-05-goc-l-kem-phoi-da-bo-tay-vat.jpg",
     gallery: [
-      "assets/images/sofa-l/sofa-l-05-khung-go-tu-nhien.jpg"
+      "assets/images/sofa-l/sofa-l-05-goc-l-kem-phoi-da-bo-tay-vat.jpg"
     ],
     colors: [
-      { name: "Ghi Xám Đậm", hex: "#484d54" },
-      { name: "Nâu Gỗ Tự Nhiên", hex: "#8d5b38" },
-      { name: "Kem Ấm", hex: "#eee4d0" }
+      { name: "Kem Phối Nâu Bò", hex: "#d8c4b6" },
+      { name: "Ghi Sáng Phối Xám Đen", hex: "#94a3b8" },
+      { name: "Cam Đất Phối Trắng Kem", hex: "#ea580c" }
     ],
-    description: "Sự kết hợp hoàn hảo giữa kỹ nghệ mộc truyền thống và sofa đệm mút hiện đại. Khung sườn gỗ sồi tự nhiên được phô diễn khéo léo bo viền quanh thân và tay vịn, tạo vẻ đẹp ấm cúng, sang trọng và trường tồn cùng thời gian."
+    description: "Mẫu sofa góc chữ L mang ngôn ngữ thiết kế Italia sang trọng với đường tay vát loe dạng cánh én mở rộng không gian ngồi. Sự kết hợp đối lập hài hòa giữa đệm ngồi trắng kem mịn màng và viền khung bọc da bò nâu thời thượng tạo nên điểm nhấn kiến trúc ấn tượng cho phòng khách hiện đại."
+  },
+
+  {
+    id: "sofa-l-06-nordic-nau-dat-chan-go",
+    name: "Sofa Góc Chữ L Bắc Âu Vải Nỉ Nâu Đất Chân Gỗ Thanh Mảnh",
+    code: "SOFA-L06",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Thiết kế Scandinavian Bắc Âu đệm dày êm ái, chân gỗ tự nhiên tiện tròn thanh thoát",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2800 x 1750 x 820 mm (May đo theo yêu cầu diện tích)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân gỗ sồi tự nhiên tiện côn",
+    cushion: "Mút Việt Nam hoặc Việt Nhật nguyên khối, đệm rời tháo giặt dễ dàng",
+    badge: "BẮC ÂU HIỆN ĐẠI",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-06-nordic-nau-dat-chan-go.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-06-nordic-nau-dat-chan-go.jpg"
+    ],
+    colors: [
+      { name: "Nâu Đất Cổ Điển", hex: "#8c5332" },
+      { name: "Ghi Xám Khói", hex: "#6b7280" },
+      { name: "Trắng Kem Sữa", hex: "#f5f5f4" }
+    ],
+    description: "Mẫu sofa góc chữ L mang phong cách Bắc Âu Scandinavian tối giản và thanh lịch. Tông màu nâu đất ấm áp kết hợp cùng chân gỗ tự nhiên thanh mảnh, tựa lưng và đệm ngồi dày dặn nâng niu từng khoảnh khắc nghỉ ngơi thư thái của gia đình."
+  },
+  {
+    id: "sofa-l-07-modular-khoi-vuong-xam-than",
+    name: "Sofa Góc Chữ L Modular Khối Vuông Bệt Đất Màu Xám Than Chì",
+    code: "SOFA-L07",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Dáng modular bệt đất khối hộp bề thế, tay vịn bản siêu rộng, tựa lưng thấp sang trọng tối giản",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "3100 x 1900 x 720 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo kết cấu khung hộp chịu tải trọng lớn, bệ chân giấu sát sàn",
+    cushion: "Mút đúc nguyên khối chống xẹp lún kết hợp lò xo giàn trợ lực đàn hồi vượt trội",
+    badge: "MODULAR BỆT",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-07-modular-khoi-vuong-xam-than.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-07-modular-khoi-vuong-xam-than.jpg"
+    ],
+    colors: [
+      { name: "Xám Than Chì", hex: "#2b2f36" },
+      { name: "Đen Tuyền", hex: "#111827" },
+      { name: "Ghi Xi Măng", hex: "#4b5563" }
+    ],
+    description: "Thiết kế dạng khối hộp Modular bệt sàn mang xu hướng nội thất đương đại Italia. Tay vịn và tựa lưng to bản vững chãi, các khối đệm góc L rộng rãi như một chiếc giường êm ái, cực kỳ thích hợp cho các không gian phòng khách hiện đại, penthouse hoặc biệt thự cao cấp."
+  },
+  {
+    id: "sofa-l-08-bo-cong-duoi-tron-xanh-peacock",
+    name: "Sofa Góc Chữ L Thiết Kế Bo Cong Đuôi Tròn Màu Xanh Ngọc Lam",
+    code: "SOFA-L08",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Đường cong Organic uốn lượn mềm mại, phần đuôi góc L bo tròn hình bán nguyệt độc đáo",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2950 x 1800 x 780 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo uốn định hình vòm cong nghệ thuật, chân kim loại thanh mảnh chịu lực",
+    cushion: "Đệm mút đàn hồi cao đúc khuôn bo tròn mềm mại, bề mặt bọc nỉ tuyết nhung mượt mà",
+    badge: "ORGANIC BO CONG",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-08-bo-cong-duoi-tron-xanh-peacock.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-08-bo-cong-duoi-tron-xanh-peacock.jpg"
+    ],
+    colors: [
+      { name: "Xanh Ngọc Lam Peacock", hex: "#0c5d6e" },
+      { name: "Xanh Navy Đậm", hex: "#1e3a8a" },
+      { name: "Xanh Rêu Đậm", hex: "#14532d" }
+    ],
+    description: "Tác phẩm nghệ thuật đường cong Organic với phần góc L đuôi tròn vát bán nguyệt độc đáo. Màu xanh ngọc lam Peacock thời thượng cùng chân kim loại thanh thoát tạo điểm nhấn tinh tế, phá vỡ sự cứng nhắc của các khối vuông truyền thống."
+  },
+  {
+    id: "sofa-l-09-hien-dai-rong-rai-xanh-navy",
+    name: "Sofa Góc Chữ L Hiện Đại Rộng Rãi Bọc Nỉ Dệt Xanh Navy",
+    code: "SOFA-L09",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Kích thước lớn rộng rãi, tựa lưng 2 nấc chần phao êm ái, bọc vải dệt nỉ gai cao cấp màu xanh navy",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "3300 x 1900 x 860 mm (Sản xuất theo diện tích thực tế)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo kết cấu khung dày chịu lực cao, hệ chân thấp giấu chân",
+    cushion: "Mút đa tầng Việt Nhật êm ái đàn hồi cao, đệm ngồi và tựa lưng phân tầng chống trũng",
+    badge: "KHÔNG GIAN LỚN",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-09-hien-dai-rong-rai-xanh-navy.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-09-hien-dai-rong-rai-xanh-navy.jpg"
+    ],
+    colors: [
+      { name: "Xanh Navy Đậm", hex: "#1e3050" },
+      { name: "Ghi Xám Đậm", hex: "#374151" },
+      { name: "Nâu Đất Ấm", hex: "#5c3d2e" }
+    ],
+    description: "Mẫu sofa góc chữ L lý tưởng cho gia đình đông thành viên hoặc phòng khách có diện tích lớn. Tựa lưng phân nấc phồng êm ái nâng đỡ trọn vẹn lưng và cổ, chất liệu nỉ dệt gai màu xanh navy sang trọng, bền bỉ và thoáng khí bốn mùa."
+  },
+  {
+    id: "sofa-l-10-deep-lounge-xam-muoi-tieu",
+    name: "Sofa Góc Chữ L Deep Lounge Đệm Dày Màu Xám Muối Tiêu",
+    code: "SOFA-L10",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Lòng ngồi sâu Deep Lounge cực đại, đệm lông vũ siêu mềm kèm gối ôm tựa lưng chống mỏi",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "3000 x 2050 x 800 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân bệt sàn phong cách tối giản",
+    cushion: "Mút khối đàn hồi kết hợp lớp đệm lông vũ dày bồng bềnh, đường viền gân chỉ nổi tinh xảo",
+    badge: "DEEP LOUNGE",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-10-deep-lounge-xam-muoi-tieu.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-10-deep-lounge-xam-muoi-tieu.jpg"
+    ],
+    colors: [
+      { name: "Xám Muối Tiêu", hex: "#4b515d" },
+      { name: "Xám Tro Nhạt", hex: "#9ca3af" },
+      { name: "Đen Than", hex: "#1f2937" }
+    ],
+    description: "Dáng sofa góc Deep Lounge đệm sâu cực đại mang lại cảm giác ngả lưng chìm đắm trong sự thư giãn tuyệt đối. Tông màu xám muối tiêu tinh tế phối cùng đường may viền nổi bật (French seam) tạo nên đẳng cấp tối giản thời thượng cho ngôi nhà."
+  },
+
+  {
+    id: "sofa-l-11-nhung-xanh-luc-bao-chan-vang",
+    name: "Sofa Góc Chữ L Nhung Tuyết Xanh Lục Bảo Chân Mạ Vàng PVD",
+    code: "SOFA-L11",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Bọc nhung tuyết mịn màu xanh lục bảo hoàng gia, chân thanh mảnh kim loại mạ PVD vàng sang trọng",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2900 x 1800 x 820 mm (May đo theo yêu cầu diện tích)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân kim loại mạ PVD vàng gold",
+    cushion: "Mút nguyên khối Việt Nhật đàn hồi cao kết hợp lò xo nén chống xẹp lún",
+    badge: "HOÀNG GIA Ý",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-11-nhung-xanh-luc-bao-chan-vang.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-11-nhung-xanh-luc-bao-chan-vang.jpg"
+    ],
+    colors: [
+      { name: "Xanh Lục Bảo Emerald", hex: "#046a38" },
+      { name: "Xanh Sapphire", hex: "#0f4c81" },
+      { name: "Ghi Xám Khói", hex: "#64748b" }
+    ],
+    description: "Mẫu sofa góc chữ L quý tộc với chất liệu nhung tuyết màu xanh lục bảo cuốn hút mọi ánh nhìn. Chân kim loại thanh mảnh mạ PVD ánh vàng tạo độ thoáng gầm và toát lên vẻ đẹp kiêu sa, lộng lẫy cho phòng khách đẳng cấp."
+  },
+  {
+    id: "sofa-l-12-tan-co-dien-rut-cuc-ghi-xam",
+    name: "Sofa Góc Chữ L Tân Cổ Điển Rút Cúc Quả Trám Màu Ghi Xám",
+    code: "SOFA-L12",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Tựa lưng chần cúc quả trám thủ công tỉ mỉ, tay cuộn mềm mại phối chân gỗ tiện tròn",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "3000 x 1850 x 850 mm (May đo theo kích thước phòng)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Gỗ: Sồi, Thông, Keo sấy khô đạt chuẩn chịu lực, chân gỗ tự nhiên tiện tròn sơn bóng",
+    cushion: "Mút đa tầng Việt Nhật êm ái, bề mặt rút cúc quả trám sắc sảo không bai giãn",
+    badge: "TÂN CỔ ĐIỂN",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-12-tan-co-dien-rut-cuc-ghi-xam.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-12-tan-co-dien-rut-cuc-ghi-xam.jpg"
+    ],
+    colors: [
+      { name: "Ghi Xám Cổ Điển", hex: "#94a3b8" },
+      { name: "Trắng Kem", hex: "#f8fafc" },
+      { name: "Xanh Pastel", hex: "#7dd3fc" }
+    ],
+    description: "Sự giao thoa hoàn hảo giữa phong cách sofa góc hiện đại và nét đẹp quý phái của nghệ thuật rút cúc quả trám tân cổ điển. Từng nếp gấp múi chần được may đo tỉ mỉ bằng tay, đệm ngồi êm ái đàn hồi nâng niu gia chủ."
+  },
+  {
+    id: "sofa-l-15-chu-u-double-chaise-xanh-la",
+    name: "Sofa Góc Chữ U Double Chaise Khổ Lớn Màu Xanh Rêu Thảo Mộc",
+    code: "SOFA-L13",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Thiết kế dáng chữ U hai góc ngả lưng Double Chaise cực đại, chần ô vuông hiện đại bề thế",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "3800 x 2000 x 820 mm (May đo theo diện tích đại sảnh)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo kết cấu chịu lực cực đại, chân gỗ tự nhiên gầm cao",
+    cushion: "Mút Việt Nhật nguyên khối đúc dày, đệm ngồi chần ô múi nổi chống xẹp tuyệt đối",
+    badge: "CHỮ U BỀ THẾ",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-15-chu-u-double-chaise-xanh-la.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-15-chu-u-double-chaise-xanh-la.jpg"
+    ],
+    colors: [
+      { name: "Xanh Rêu Thảo Mộc", hex: "#3f6212" },
+      { name: "Ghi Xám Bê Tông", hex: "#6b7280" },
+      { name: "Nâu Da Bò", hex: "#9a3412" }
+    ],
+    description: "Bộ sofa đại cảnh dáng chữ U hai góc nằm nghỉ (Double Chaise) mang lại không gian tiếp khách và thư giãn hoành tráng nhất. Cả gia đình và bạn bè có thể cùng lúc ngả lưng xem phim, trò chuyện thoải mái trong không gian ấm cúng."
   },
 
   // 2. Sofa đơn (Các mẫu sofa băng / văng may đo thực tế từ ảnh xưởng)
@@ -145,7 +356,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2400 x 950 x 750 mm (May đo theo kích thước yêu cầu)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp (Xanh Rêu Sage, Be Cát, Ghi Xám...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo sấy khô kiên cố",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Đệm ngồi có lò xo hoặc không lò xo)",
     badge: "BÁN CHẠY",
@@ -171,7 +382,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2000 x 900 x 820 mm (Gia công vừa vặn từng centimet)",
-    material: "Chất liệu Da hoặc Nỉ dệt sợi thô cao cấp (Ghi Sáng, Trắng Kem, Xanh Pastel...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo sấy nhiệt đạt chuẩn",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Tùy chọn có lò xo hoặc không lò xo)",
     badge: "PHÒNG NHỎ",
@@ -197,7 +408,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2600 x 950 x 800 mm (Sản xuất theo kích thước phòng khách)",
-    material: "Chất liệu Da hoặc Nỉ nhập khẩu (Cam Cognac, Nâu Bò, Đen Huyền Bí...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo tự nhiên sấy lò hơi",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Có lò xo hoặc không lò xo)",
     badge: "CAO CẤP",
@@ -223,7 +434,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2200 x 920 x 850 mm (Tùy biến theo không gian)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp (Be Kem, Ghi Xám, Xám Titan...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo kết hợp khung viền kim loại sơn tĩnh điện",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Có lò xo hoặc không lò xo)",
     badge: "MẪU MỚI",
@@ -249,7 +460,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2300 x 900 x 780 mm (May đo theo mặt bằng thực tế)",
-    material: "Chất liệu Da hoặc Nỉ (Vàng Bò Caramel, Nâu Đậm, Nâu Đất...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo sấy khô chống mối mọt cong vênh",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Có lò xo hoặc không lò xo)",
     badge: "TINH TẾ",
@@ -276,7 +487,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2800 x 1000 x 850-1000 mm (Gia công theo kích thước yêu cầu)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp (Màu Kem Sữa, Ghi Xám, Nâu Bò...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo sấy lò hơi chống cong vênh",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Tùy chọn có lò xo hoặc không lò xo)",
     badge: "CÔNG NGHỆ Ý",
@@ -302,7 +513,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2400 x 950 x 720 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Da hoặc Nỉ nhập khẩu bền màu, chống xù lông",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo kiên cố chịu lực",
     cushion: "Mút Việt Nam hoặc Việt Nhật nguyên khối chống lún",
     badge: "MINIMALIST",
@@ -328,7 +539,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "850 x 820 x 820 mm (Chuẩn công thái học ngả lưng thư thái)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp phối vải dạ họa tiết Houndstooth (răng sói) kinh điển",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ sồi tự nhiên tẩm sấy định hình vòm cung + Chân & vành đai kim loại mạ PVD vàng",
     cushion: "Mút Việt Nhật nguyên khối D40 đàn hồi cao (Đệm ngồi phân tán lực êm dịu)",
     badge: "HOUNDSTOOTH LUXURY",
@@ -354,7 +565,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2200 x 920 x 820 mm (May đo theo phòng khách căn hộ)",
-    material: "Chất liệu Da hoặc Nỉ dệt sợi thoáng khí (Be Cát, Nâu Mocha, Ghi Nhạt...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo tẩm sấy tiêu chuẩn xưởng",
     cushion: "Mút Việt Nam hoặc Việt Nhật phân tán lực êm dịu",
     badge: "ẤM CÚNG",
@@ -380,7 +591,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2400 x 960 x 760 mm (Gia công vừa vặn từng centimet)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp (Xanh Pastel Khói, Ghi Sáng, Cam Đất...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo kết hợp đế mộc sơn phủ bảo vệ vân gỗ",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Tùy chọn có hoặc không lò xo)",
     badge: "THIẾT KẾ MỚI",
@@ -406,7 +617,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "850 x 820 x 820 mm (Gia công may đo theo kích thước yêu cầu)",
-    material: "Chất liệu Da hoặc Nỉ nhập khẩu màu kem trắng kết hợp vải dạ kẻ Houndstooth dệt thủ công",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ tự nhiên tẩm sấy chống cong vênh mối mọt + Chân kim loại mạ vàng sang trọng",
     cushion: "Đệm mút Việt Nhật đúc nguyên khối chống xẹp lún, êm ái vượt trội",
     badge: "THỰC TẾ TẠI XƯỞNG",
@@ -432,7 +643,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "880 x 900 x 850 mm (Rộng 88cm x Sâu 90cm x Cao 85cm)",
-    material: "Chất liệu Da hoặc Nỉ dệt sợi thoáng khí cao cấp (Be Cát, Nâu Đất, Xám Khói...)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ: Sồi, Thông, Keo tẩm sấy tiêu chuẩn chống cong vênh mối mọt",
     cushion: "Mút Việt Nhật nguyên khối D40 đàn hồi cao (Đệm ngồi phân tán lực êm ái)",
     badge: "TỐI GIẢN HIỆN ĐẠI",
@@ -458,7 +669,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "920 x 880 x 830 mm (Rộng 92cm x Sâu 88cm x Cao 83cm)",
-    material: "Chất liệu Da hoặc Nỉ dệt sợi chéo melange cao cấp chống xù xước",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ tự nhiên gia cố góc chịu lực + Chân kim loại trụ tròn mạ chrome/inox",
     cushion: "Hệ đệm mút Việt Nhật đa tầng kèm gối tựa lưng êm ái phân tán áp lực",
     badge: "THANH LỊCH",
@@ -484,7 +695,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "860 x 860 x 820 mm (Rộng 86cm x Sâu 86cm x Cao 82cm)",
-    material: "Vải dệt nỉ cao cấp màu xanh Sage phối viền piping chỉ trắng nổi bật",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ tự nhiên tẩm sấy + Gầm khung thép sơn tĩnh điện đen phối đầu chân bọc đồng PVD",
     cushion: "Mút đúc tỷ trọng cao kết hợp lò xo túi độc lập êm dịu",
     badge: "ĐƯƠNG ĐẠI",
@@ -510,7 +721,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "820 x 850 x 860 mm (Đường kính xoay linh hoạt)",
-    material: "Vải nỉ Bouclé (lông cừu xoăn) mềm mịn nhập khẩu, thoáng khí, chống bám bụi",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ uốn cong công nghệ cao + Trục xoay bi thép chịu tải 360 độ và đế gỗ sồi sơn màu óc chó",
     cushion: "Mút nguyên khối lông vũ nhân tạo bao bọc đệm D40 siêu đàn hồi",
     badge: "GHẾ XOAY 360°",
@@ -536,7 +747,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1000 x 980 x 800 mm (Dáng bành cỡ đại thư giãn tối đa)",
-    material: "Vải dệt thô sợi linen/cotton tự nhiên màu nâu hạt dẻ mộc mạc bền bỉ",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ tự nhiên bản dày chịu lực cao, chân đế giấu gầm thanh thoát",
     cushion: "Hệ đệm kép kết hợp mút D40 và gối lông vũ phồng êm ái",
     badge: "DEEP SEAT COMFORT",
@@ -562,7 +773,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "880 x 860 x 860 mm (Rộng 88cm x Sâu 86cm x Cao 86cm)",
-    material: "Vải dệt thô hoa văn Herringbone (xương cá) nhập khẩu cao cấp, đinh đồng trang trí viền tay",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Gỗ sồi tự nhiên tẩm sấy công nghệ cao chống cong vênh mối mọt, chân gỗ đặc tiện khối",
     cushion: "Mút đúc Việt Nhật D40 đàn hồi cao, tựa lưng phồng lông vũ nhân tạo",
     badge: "TÁN ĐINH ĐỒNG",
@@ -588,7 +799,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "850 x 820 x 780 mm (Rộng 85cm x Sâu 82cm x Cao 78cm)",
-    material: "Vải dệt sợi cotton linen màu xanh bạc hà (Mint Pastel) thoáng khí và êm ái",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ tự nhiên gia cố chịu lực + Chân khung kim loại chữ U mạ chrome bóng gương",
     cushion: "Đệm mút Việt Nhật nguyên khối kết hợp lò xo giàn trợ lực đàn hồi bền bỉ",
     badge: "BẮC ÂU HIỆN ĐẠI",
@@ -615,7 +826,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "820 x 840 x 800 mm (Rộng 82cm x Sâu 84cm x Cao 80cm)",
-    material: "Vải nỉ nhung dệt sợi cao cấp màu xanh Coban / Royal Blue rực rỡ, bề mặt mềm mịn",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ tự nhiên uốn cong định hình + 4 chân kim loại côn sơn tĩnh điện đen mờ",
     cushion: "Mút định hình công nghệ cao ôm khít từng đường cong cơ thể khi tựa ngả",
     badge: "XANH HOÀNG GIA",
@@ -641,7 +852,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "860 x 850 x 820 mm (Rộng 86cm x Sâu 85cm x Cao 82cm)",
-    material: "Chất liệu Da Ý hoặc Da Microfiber cao cấp mềm êm màu xanh ngọc pastel (Baby Blue)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung gỗ Sồi/Keo sấy khô định hình + 4 chân gỗ sồi tự nhiên tiện côn sơn màu óc chó",
     cushion: "Mút khối D40 may chần chỉ rãnh ô vuông dập phồng chống xẹp lún",
     badge: "MID-CENTURY",
@@ -671,7 +882,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1550 x 890 x 650 mm (Dài 155cm x Rộng 89cm x Cao 65cm)",
-    material: "Chất liệu Da hoặc Nỉ nhung cao cấp (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo định hình chịu lực cao",
     cushion: "Mút Việt Nhật nguyên khối định hình đàn hồi chống lún xẹp",
     badge: "CÔNG THÁI HỌC",
@@ -697,7 +908,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1600 x 750 x 820 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Nỉ nhung tuyết hoặc Da bò Ý / Microfiber",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân tiện gỗ tự nhiên",
     cushion: "Mút Việt Nam hoặc Việt Nhật (Đệm ngồi lò xo cối êm ái)",
     badge: "TÂN CỔ ĐIỂN",
@@ -723,7 +934,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1650 x 800 x 850 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Vải bố thô cao cấp thoáng khí hoặc Da / Nỉ nhung",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo xử lý chống cong vênh mối mọt",
     cushion: "Mút Việt Nhật nguyên khối không lún, tặng kèm gối tựa lưng êm ái",
     badge: "SANG TRỌNG",
@@ -740,42 +951,16 @@ const SOFA_DATABASE = [
     description: "Sở hữu vẻ đẹp trang nhã với tông màu be cát ấm cúng, điểm xuyết hàng đinh tán đồng chạy dọc đường cong thân ghế. Thiết kế lưng thoai thoải ôm trọn lưng người nằm."
   },
   {
-    id: "ghe-thu-gian-chaise-trang-kem-mui-noi",
-    name: "Ghế Nằm Thư Giãn Chaise Lounge Múi Phao Nổi Trắng Kem",
-    code: "SOFA-TG04",
-    category: "cac-mau-ghe-thu-gian",
-    categoryName: "Các mẫu ghế thư giãn",
-    subtitle: "Thiết kế múi phao uốn lượn bồng bềnh, kèm gối ôm trụ tròn nâng đỡ cổ",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "1700 x 850 x 840 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp màu trắng kem quý phái",
-    frame: "Khung Gỗ: Sồi, Thông, Keo dày dặn, chịu tải vượt trội",
-    cushion: "Mút Việt Nhật chần múi phao nổi bồng bềnh, gối trụ tròn êm ái",
-    badge: "XU HƯỚNG",
-    isFeatured: true,
-    image: "assets/images/ghe-thu-gian-chaise-trang-kem.jpg",
-    gallery: [
-      "assets/images/ghe-thu-gian-chaise-trang-kem.jpg"
-    ],
-    colors: [
-      { name: "Trắng Kem", hex: "#faf8f5" },
-      { name: "Ghi Khói", hex: "#cbd5e1" },
-      { name: "Vàng Bơ", hex: "#fef08a" }
-    ],
-    description: "Mẫu ghế thư giãn tuyệt đẹp với thiết kế múi phao nâng đỡ êm ái phần chân và đùi, tựa lưng rút nút sâu cùng gối tròn kê gáy tạo cảm giác thư thái tối đa."
-  },
-  {
     id: "ghe-thu-gian-uon-cong-hien-dai-xam",
     name: "Ghế Nằm Thư Giãn Uốn Cong Hiện Đại Kèm Gối Tựa Đầu",
-    code: "SOFA-TG05",
+    code: "SOFA-TG04",
     category: "cac-mau-ghe-thu-gian",
     categoryName: "Các mẫu ghế thư giãn",
     subtitle: "Đường cong S-Line nâng đỡ cột sống hoàn hảo, tối giản tinh tế",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1600 x 680 x 780 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Vải dệt nỉ cao cấp thoáng khí hoặc Da công nghiệp",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo uốn cong công thái học, chân gỗ mộc tự nhiên",
     cushion: "Mút Việt Nhật đúc nguyên khối chống xẹp lún, đệm tựa đầu điều chỉnh",
     badge: "HIỆN ĐẠI",
@@ -794,14 +979,14 @@ const SOFA_DATABASE = [
   {
     id: "ghe-thu-gian-chaise-velvet-xanh-royal",
     name: "Ghế Nằm Thư Giãn Chaise Lounge Quý Tộc Xanh Royal",
-    code: "SOFA-TG06",
+    code: "SOFA-TG05",
     category: "cac-mau-ghe-thu-gian",
     categoryName: "Các mẫu ghế thư giãn",
     subtitle: "Tựa tay cuộn tròn cổ điển, đệm rút cúc bọc nhung tuyết xanh Royal",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1680 x 780 x 820 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Nỉ nhung tuyết Royal cao cấp hoặc Da bò Ý",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân tiện sơn bóng",
     cushion: "Mút Việt Nhật nguyên khối có lò xo đàn hồi êm ái",
     badge: "QUÝ TỘC",
@@ -820,14 +1005,14 @@ const SOFA_DATABASE = [
   {
     id: "ghe-thu-gian-chaise-velvet-hong-pastel",
     name: "Ghế Nằm Thư Giãn Chaise Lounge Nhung Hồng Pastel",
-    code: "SOFA-TG07",
+    code: "SOFA-TG06",
     category: "cac-mau-ghe-thu-gian",
     categoryName: "Các mẫu ghế thư giãn",
     subtitle: "Dáng uốn lượn nữ tính thanh lịch, đệm rút múi phao êm ái bồng bềnh",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1600 x 750 x 800 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Nhung nỉ cao cấp màu hồng pastel ngọt ngào",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo định hình vững chãi, chân tiện gỗ tự nhiên",
     cushion: "Mút Việt Nhật đàn hồi cao, chần múi nổi chống xẹp lún",
     badge: "NGỌT NGÀO",
@@ -846,14 +1031,14 @@ const SOFA_DATABASE = [
   {
     id: "ghe-thu-gian-cong-da-trang-hien-dai",
     name: "Ghế Nằm Thư Giãn Da Cao Cấp Màu Trắng Hiện Đại",
-    code: "SOFA-TG08",
+    code: "SOFA-TG07",
     category: "cac-mau-ghe-thu-gian",
     categoryName: "Các mẫu ghế thư giãn",
     subtitle: "Thiết kế công thái học uốn lượn, bọc da trắng tinh khôi chân kim loại mạ crom",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1650 x 800 x 860 mm (May đo theo yêu cầu)",
-    material: "Chất liệu Da Microfiber hoặc Da bò Ý chống thấm, dễ lau chùi",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung cốt thép kết hợp Gỗ Sồi chịu lực, chân kim loại mạ crom sáng bóng",
     cushion: "Mút Việt Nhật đúc nguyên khối dày dặn, đệm kê tay êm ái",
     badge: "HIỆN ĐẠI",
@@ -872,14 +1057,14 @@ const SOFA_DATABASE = [
   {
     id: "ghe-thu-gian-khung-go-oc-cho-coral",
     name: "Ghế Nằm Thư Giãn Khung Gỗ Uốn Bo Cong Màu Cam Đất",
-    code: "SOFA-TG09",
+    code: "SOFA-TG08",
     category: "cac-mau-ghe-thu-gian",
     categoryName: "Các mẫu ghế thư giãn",
     subtitle: "Khung chân gỗ tự nhiên uốn lượn tinh xảo, bọc vải dệt thô màu coral ấm cúng",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1700 x 760 x 780 mm (May đo theo yêu cầu)",
-    material: "Vải dệt thô cao cấp thoáng khí, chống xù lông (Kèm gối tựa lưng xanh mint)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung chân Gỗ Óc Chó / Sồi tự nhiên uốn nhiệt CNC liền khối độc đáo",
     cushion: "Mút Việt Nhật nguyên khối mềm mại nâng đỡ cột sống",
     badge: "ĐỘC BẢN",
@@ -895,32 +1080,6 @@ const SOFA_DATABASE = [
     ],
     description: "Tác phẩm nghệ thuật với đường bệ gỗ tự nhiên uốn cong mềm mại dọc suốt thân ghế. Màu cam đất coral ấm áp phối gối kê xanh mint mang lại cảm giác bình yên, thư thái bên cửa sổ."
   },
-  {
-    id: "ghe-thu-gian-doc-sach-velvet-xanh-reu",
-    name: "Ghế Thư Giãn Đọc Sách Dáng Cánh Cung Xanh Rêu",
-    code: "SOFA-TG10",
-    category: "cac-mau-ghe-thu-gian",
-    categoryName: "Các mẫu ghế thư giãn",
-    subtitle: "Lòng ghế rộng ôm trọn cơ thể, bọc nhung tuyết xanh rêu êm ái thư giãn",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "950 x 900 x 920 mm (May đo theo yêu cầu)",
-    material: "Nhung nỉ tuyết cao cấp màu xanh rêu sang trọng, chống bám bụi",
-    frame: "Khung Gỗ: Sồi, Thông, Keo định hình vững chãi, 4 chân gỗ mộc thon gọn",
-    cushion: "Mút đúc Việt Nhật nguyên khối ôm trọn lưng cổ và hông",
-    badge: "BEST SELLER",
-    isFeatured: true,
-    image: "assets/images/ghe-thu-gian-doc-sach-velvet-xanh-reu.jpg",
-    gallery: [
-      "assets/images/ghe-thu-gian-doc-sach-velvet-xanh-reu.jpg"
-    ],
-    colors: [
-      { name: "Xanh Rêu", hex: "#166534" },
-      { name: "Vàng Nghệ", hex: "#eab308" },
-      { name: "Ghi Trầm", hex: "#334155" },
-    ],
-    description: "Mẫu ghế đọc sách quốc dân được yêu thích nhất. Thiết kế lòng ghế hình cánh cung sâu rộng, cho phép ngồi ngả lưng, co chân đọc sách, lướt điện thoại hay chợp mắt vô cùng thoải mái."
-  },
   
 
   // 4. Ghế tân cổ điển (Bộ sưu tập 5 mẫu may đo tân cổ điển sang trọng tại xưởng)
@@ -934,7 +1093,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "1100 x 950 x 800 mm (May đo theo yêu cầu)",
-    material: "Da bò tự nhiên nhập khẩu hoặc Da Microfiber cổ điển màu nâu vintage",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân gỗ tiện tròn",
     cushion: "Mút Việt Nhật nguyên khối kết hợp hệ thống lò xo cối êm ái đàn hồi",
     badge: "CHESTERFIELD",
@@ -951,68 +1110,16 @@ const SOFA_DATABASE = [
     description: "Biểu tượng bất hủ của phong cách quý tộc Anh Quốc. Từng điểm rút cúc quả trám được nghệ nhân xưởng may thủ công đều tăm tắp, viền đinh tán đồng sắc sảo tạo nên vẻ đẹp vương giả, uy quyền."
   },
   {
-    id: "ghe-tan-co-dien-chaise-lounge-go-coral",
-    name: "Ghế Nằm Chaise Lounge Tân Cổ Điển Khung Gỗ Uốn Lượn",
-    code: "SOFA-TC02",
-    category: "ghe-tan-co-dien",
-    categoryName: "Ghế tân cổ điển",
-    subtitle: "Khung bệ gỗ tự nhiên uốn bo cong nghệ thuật, vải dệt thô màu hồng đất",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "1700 x 760 x 780 mm (May đo theo yêu cầu)",
-    material: "Vải dệt cao cấp nhập khẩu màu hồng đất coral (Tặng kèm gối tựa xanh mint)",
-    frame: "Khung bệ Gỗ Óc Chó / Sồi tự nhiên uốn lượn CNC bo cong nguyên khối",
-    cushion: "Mút Việt Nhật nguyên khối đàn hồi êm ái, nâng đỡ cột sống hoàn hảo",
-    badge: "TÂN CỔ ĐIỂN",
-    isFeatured: true,
-    image: "assets/images/ghe-tan-co-dien-chaise-lounge-go-coral.jpg",
-    gallery: [
-      "assets/images/ghe-tan-co-dien-chaise-lounge-go-coral.jpg"
-    ],
-    colors: [
-      { name: "Hồng Đất Coral", hex: "#d97757" },
-      { name: "Be Cát", hex: "#d1c7b7" },
-      { name: "Ghi Trầm", hex: "#52525b" }
-    ],
-    description: "Sự giao thoa hoàn mỹ giữa nét tân cổ điển quý phái và đường nét uốn lượn mềm mại. Phần bệ đỡ bằng gỗ sồi tự nhiên ôm trọn dáng ghế, tạo cảm giác thư giãn tĩnh tại tuyệt đối bên không gian phòng khách hoặc phòng ngủ."
-  },
-  {
-    id: "ghe-tan-co-dien-wingback-nhung-cam-dat",
-    name: "Ghế Bành Đơn Wingback Tai Voi Tân Cổ Điển Nhung Cam Đất",
-    code: "SOFA-TC03",
-    category: "ghe-tan-co-dien",
-    categoryName: "Ghế tân cổ điển",
-    subtitle: "Dáng tai voi quý phái, tựa lưng chần nút quả trám kèm viền đinh tán đồng",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "900 x 880 x 1100 mm (May đo theo yêu cầu)",
-    material: "Nhung nỉ tuyết cao cấp màu cam đất / cognac quý phái, êm mịn",
-    frame: "Khung Gỗ: Sồi, Thông, Keo định hình vững chãi, chân cabriole cổ điển sơn đen",
-    cushion: "Mút đúc Việt Nhật nguyên khối, đệm ngồi rời dày dặn có khóa kéo vệ sinh",
-    badge: "WINGBACK",
-    isFeatured: true,
-    image: "assets/images/ghe-tan-co-dien-wingback-nhung-cam-dat.jpg",
-    gallery: [
-      "assets/images/ghe-tan-co-dien-wingback-nhung-cam-dat.jpg"
-    ],
-    colors: [
-      { name: "Cam Đất", hex: "#c25420" },
-      { name: "Xanh Emerald", hex: "#065f46" },
-      { name: "Nâu Cổ Điển", hex: "#78350f" }
-    ],
-    description: "Mẫu ghế bành thư giãn Wingback kinh điển châu Âu với phần tựa đầu 'tai voi' nâng đỡ trọn vẹn cổ và vai gáy. Tựa lưng rút cúc quả trám sang trọng cùng đường đinh tán đồng chạy viền thủ công tỉ mỉ."
-  },
-  {
     id: "ghe-tan-co-dien-sofa-so-nhung-xanh-ocean",
     name: "Sofa Văng Tân Cổ Điển Dáng Sò Bọc Nhung Xanh Ocean",
-    code: "SOFA-TC04",
+    code: "SOFA-TC02",
     category: "ghe-tan-co-dien",
     categoryName: "Ghế tân cổ điển",
     subtitle: "May chần múi rãnh sò cánh cung duyên dáng, bọc nhung ngọc ocean cao cấp",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "2100 x 900 x 850 mm (May đo theo yêu cầu)",
-    material: "Nhung nỉ tuyết bích ngọc cao cấp chống bám bụi, mềm mại óng ánh",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn uốn cong cánh cung kiên cố",
     cushion: "Mút Việt Nhật nguyên khối nhiều lớp êm ái, định hình múi sò căng phồng",
     badge: "DÁNG SÒ",
@@ -1029,42 +1136,16 @@ const SOFA_DATABASE = [
     description: "Tạo hình cánh sò đại dương mềm mại quyến rũ mang hơi thở phong cách Art Deco quý phái. Đệm ngồi liền êm ái cùng các múi rãnh dọc chần thủ công tạo cảm giác thư giãn ôm ấp trọn vẹn người ngồi."
   },
   {
-    id: "ghe-tan-co-dien-hoang-gia-khung-go-cham-khac",
-    name: "Sofa Tân Cổ Điển Hoàng Gia Khung Gỗ Chạm Khắc Bọc Gấm Kem",
-    code: "SOFA-TC05",
-    category: "ghe-tan-co-dien",
-    categoryName: "Ghế tân cổ điển",
-    subtitle: "Vương miện gỗ đục chạm hoa văn Baroque tinh xảo, bọc vải gấm hoa kem sữa",
-    price: "Tư Vấn Báo Giá Tận Xưởng",
-    originalPrice: "",
-    dimensions: "2050 x 920 x 980 mm (May đo theo yêu cầu)",
-    material: "Vải gấm dệt hoa văn hoàng gia cổ điển kết hợp nỉ kem cao cấp",
-    frame: "Khung Gỗ Sồi tự nhiên chạm khắc hoa lá tây Baroque thủ công, sơn bóng PU cao cấp",
-    cushion: "Mút Việt Nhật đàn hồi cao kết hợp lò xo cối, tặng kèm 2 gối tựa hoàng gia",
-    badge: "HOÀNG GIA",
-    isFeatured: true,
-    image: "assets/images/ghe-tan-co-dien-hoang-gia-khung-go-cham-khac.jpg",
-    gallery: [
-      "assets/images/ghe-tan-co-dien-hoang-gia-khung-go-cham-khac.jpg"
-    ],
-    colors: [
-      { name: "Kem Gấm Hoa", hex: "#fef3c7" },
-      { name: "Vàng Ánh Kim", hex: "#eab308" },
-      { name: "Đỏ Bordeaux", hex: "#881337" }
-    ],
-    description: "Đỉnh cao nghệ thuật chế tác tân cổ điển phong cách cung điện Châu Âu. Khung gỗ tự nhiên lộ diện được điêu khắc hoa văn vương miện cầu kỳ, kết hợp tựa lưng rút cúc quả trám và đệm ngồi bọc vải gấm hoa sang trọng tuyệt mỹ."
-  },
-  {
     id: "ghe-tan-co-dien-don-da-than-chan-kim-loai",
     name: "Ghế Đơn Tân Cổ Điển Hiện Đại Rút Nút Da Than Chân Kim Loại",
-    code: "SOFA-TC06",
+    code: "SOFA-TC03",
     category: "ghe-tan-co-dien",
     categoryName: "Ghế tân cổ điển",
     subtitle: "Dáng khối vuông vức thanh lịch, tựa lưng chần nút quả trám, chân thép thon gọn",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "880 x 860 x 820 mm (May đo theo yêu cầu)",
-    material: "Da Microfiber cao cấp màu xám than / than chì chống trầy xước, mềm mịn",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo định hình vuông vức kiên cố, chân kim loại sơn tĩnh điện đen",
     cushion: "Mút Việt Nhật nguyên khối định hình cao, đệm ngồi êm ái chống xẹp lún",
     badge: "HIỆN ĐẠI",
@@ -1083,14 +1164,14 @@ const SOFA_DATABASE = [
   {
     id: "ghe-tan-co-dien-wingback-chesterfield-da-den",
     name: "Ghế Bành Đơn Wingback Chesterfield Da Đen Quý Tộc",
-    code: "SOFA-TC07",
+    code: "SOFA-TC04",
     category: "ghe-tan-co-dien",
     categoryName: "Ghế tân cổ điển",
     subtitle: "Tựa tai voi cao rút cúc quả trám toàn thân, nẹp viền đinh đồng chạy dọc tay cuộn",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "920 x 900 x 1120 mm (May đo theo yêu cầu)",
-    material: "Da bò tự nhiên cao cấp hoặc Da Microfiber đen bóng quý phái, bền đẹp vượt thời gian",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung Gỗ: Sồi, Thông, Keo sấy khô tuyển chọn lõi chắc chắn, chân gỗ tiện cổ điển sơn đen",
     cushion: "Mút Việt Nhật nguyên khối nhiều tầng kết hợp lò xo cối đàn hồi êm ái trọn vẹn",
     badge: "QUÝ TỘC",
@@ -1107,6 +1188,297 @@ const SOFA_DATABASE = [
     description: "Đỉnh cao quyền lực và sự sang trọng với mẫu ghế Wingback phong cách Chesterfield da đen bóng bẩy. Tựa lưng cao uốn lượn hình tai voi ôm trọn người ngồi, từng múi rút cúc sâu hút mắt cùng hàng đinh tán thủ công sắc sảo khẳng định đẳng cấp gia chủ."
   },
 
+  {
+    id: "sofa-tan-co-dien-chesterfield-3-cho-xanh-petrol",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield 3 Chỗ Rút Múi Xanh Petrol Blue",
+    code: "SOFA-TC05",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Kiểu dáng Chesterfield kinh điển, rút múi quả trám sâu toàn thân tựa và tay cuộn",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2200 x 950 x 820 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân gỗ tiện tròn",
+    cushion: "Mút Việt Nhật nguyên khối kết hợp lò xo cối đàn hồi êm ái, đệm ngồi 3 khối tách rời",
+    badge: "CHESTERFIELD",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien-chesterfield-3-cho-xanh-petrol.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien-chesterfield-3-cho-xanh-petrol.jpg"
+    ],
+    colors: [
+      { name: "Xanh Petrol Blue", hex: "#1e3a47" },
+      { name: "Xanh Navy", hex: "#1e293b" },
+      { name: "Đen Tuyển", hex: "#0f172a" }
+    ],
+    description: "Mẫu sofa văng Chesterfield 3 chỗ ngồi mang đậm phong cách hoàng gia phương Tây. Bề mặt lưng và tay cuộn được người thợ lành nghề rút múi quả trám sâu tỉ mỉ, đệm ngồi 3 khoang êm ái bọc nỉ tuyết nhung hoặc da cao cấp tạo cảm giác thư thái tuyệt đối."
+  },
+  {
+    id: "sofa-tan-co-dien-cong-ban-nguyet-hong-pastel",
+    name: "Sofa Cong Bán Nguyệt Tân Cổ Điển Rút Cúc Quả Trám Hồng Pastel",
+    code: "SOFA-TC06",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Dáng cong bán nguyệt ôm mềm mại, bề mặt rút cúc quả trám toàn diện phối chân pha lê",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2100 x 980 x 850 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo sấy khô định hình bo cong, chân pha lê acrylic trong suốt",
+    cushion: "Mút Việt Nhật nguyên tấm đàn hồi cao cấp, bề mặt rút múi êm ái chống xẹp lún",
+    badge: "BÁN NGUYỆT",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien-sofa-cong-ban-nguyet-hong-pastel.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien-sofa-cong-ban-nguyet-hong-pastel.jpg"
+    ],
+    colors: [
+      { name: "Hồng Pastel", hex: "#e0b0b8" },
+      { name: "Trắng Kem", hex: "#f8f5f0" },
+      { name: "Ghi Khói", hex: "#cbd5e1" }
+    ],
+    description: "Thiết kế dáng sofa bán nguyệt uốn cong duyên dáng, thích hợp đặt giữa phòng khách hoặc không gian studio cao cấp. Toàn bộ tựa lưng và mặt ngồi đều được rút cúc thủ công tinh xảo, kết hợp chân acrylic pha lê tạo nét đẹp thơ mộng, quý phái."
+  },
+  {
+    id: "sofa-tan-co-dien-tub-bo-cong-dinh-tan-xanh-ngoc",
+    name: "Sofa Văng Tân Cổ Điển Dáng Tub Bo Cong Viền Đinh Tán Xanh Ngọc",
+    code: "SOFA-TC07",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Thân ghế uốn liền vòng cung dáng Tub bọc nhung xanh ngọc, viền đinh tán thủ công tinh xảo",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "1850 x 880 x 780 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn uốn cong nguyên khối, bệ chân giấu liền khối",
+    cushion: "Đệm mút Việt Nhật đàn hồi cao kết hợp lò xo nén êm ái, đệm ngồi dày dặn chống trũng",
+    badge: "HOÀN THIỆN XƯỞNG",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien-sofa-tub-bo-cong-vien-dinh-tan-xanh-ngoc.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien-sofa-tub-bo-cong-vien-dinh-tan-xanh-ngoc.jpg"
+    ],
+    colors: [
+      { name: "Xanh Ngọc Lục Bảo", hex: "#1e5c54" },
+      { name: "Xanh Rêu", hex: "#2d4a3e" },
+      { name: "Ghi Xám Đậm", hex: "#334155" }
+    ],
+    description: "Mẫu sofa thực tế sản xuất tại xưởng với thiết kế dáng bồn (Tub chair) bo cong liền khối ôm trọn cơ thể. Hàng đinh tán đồng viền đều tăm tắp chạy dọc theo vành tay ghế và tựa lưng, tạo điểm nhấn thủ công đắt giá và sang trọng cho phòng khách."
+  },
+  {
+    id: "sofa-tan-co-dien-chesterfield-don-nhung-den",
+    name: "Ghế Bành Đơn Chesterfield Rút Cúc Quả Trám Nhung Đen Viền Đinh Tán",
+    code: "SOFA-TC08",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Ghế bành đơn bọc nhung đen tuyền, tựa phồng rút múi sâu kèm viền đinh tán mặt trước tay cuộn",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "1150 x 950 x 840 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân gỗ tự nhiên tiện tròn sơn màu cánh gián",
+    cushion: "Mút khối đúc Việt Nhật kết hợp hệ lò xo cối nâng đỡ toàn diện, đệm ngồi tháo rời",
+    badge: "TAY CUỘN ĐINH TÁN",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien-chesterfield-don-nhung-den-dinh-tan.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien-chesterfield-don-nhung-den-dinh-tan.jpg"
+    ],
+    colors: [
+      { name: "Đen Tuyển Quý Tộc", hex: "#0f172a" },
+      { name: "Xanh Coban Đậm", hex: "#1e1b4b" },
+      { name: "Nâu Đỏ Cigar", hex: "#451a03" }
+    ],
+    description: "Mẫu ghế bành đơn tân cổ điển quyền lực với thiết kế tay cuộn bản lớn nạm đinh tán sang trọng. Tựa lưng và lòng tay uốn được rút cúc quả trám sâu hút mắt, đệm ngồi dày êm ái giúp người ngồi tận hưởng trọn vẹn cảm giác thư thái quý tộc."
+  },
+
+  {
+    id: "sofa-tan-co-dien-chesterfield-vang-da-den-bong",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield Rút Cúc Quả Trám (Tùy Chọn 3 Màu)",
+    code: "SOFA-TC09",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Thiết kế Chesterfield quý tộc với 3 tùy chọn màu sắc: Đen bóng, Xanh Petrol và Nâu bò Cognac",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2250 x 950 x 820 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tuyển chọn lõi chắc chắn, chân gỗ tiện tròn phong cách hoàng gia",
+    cushion: "Mút Việt Nhật nguyên khối nhiều tầng kết hợp lò xo cối đàn hồi êm ái, chống xẹp lún tuyệt đối",
+    badge: "3 TÙY CHỌN MÀU",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien-chesterfield-vang-da-den-bong.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien-chesterfield-vang-da-den-bong.jpg",
+      "assets/images/ghe-tan-co-dien-chesterfield-vang-nhung-xanh-petrol.jpg",
+      "assets/images/ghe-tan-co-dien-chesterfield-vang-da-bo-cognac.jpg"
+    ],
+    colors: [
+      { name: "Đen Bóng Quý Tộc", hex: "#111827", image: "assets/images/ghe-tan-co-dien-chesterfield-vang-da-den-bong.jpg" },
+      { name: "Xanh Petrol Blue", hex: "#0e7490", image: "assets/images/ghe-tan-co-dien-chesterfield-vang-nhung-xanh-petrol.jpg" },
+      { name: "Nâu Bò Cognac", hex: "#7c2d12", image: "assets/images/ghe-tan-co-dien-chesterfield-vang-da-bo-cognac.jpg" }
+    ],
+    description: "Mẫu sofa văng Chesterfield kinh điển khẳng định đẳng cấp phòng khách hoàng gia. Tựa lưng và tay cuộn được nghệ nhân may đo rút múi quả trám sâu tinh xảo. Sản phẩm có 3 phiên bản màu sắc đẳng cấp: Đen bóng quý tộc (ảnh đại diện), Xanh Petrol sang trọng và Nâu bò Cognac thời thượng, quý khách có thể bấm xem lướt từng màu sắc thực tế."
+  },
+  {
+    id: "sofa-tan-co-dien-tuxedo-vang-kem-vien-chi",
+    name: "Sofa Văng Tuxedo Tân Cổ Điển Rút Cúc Quả Trám Màu Trắng Kem Viền Chỉ Nổi",
+    code: "SOFA-TC10",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Dáng Tuxedo tay tựa cao bằng lưng, lòng đệm và tựa lưng rút múi cúc trám viền chỉ nổi tinh tế",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2200 x 900 x 800 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo định hình vuông vắn chắc khỏe, chân thấp tinh tế",
+    cushion: "Mút nguyên khối Việt Nhật đàn hồi cao kết hợp lò xo nén chống xẹp, bề mặt chần cúc êm ái",
+    badge: "TUXEDO SOFA",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien-tuxedo-vang-kem-vien-chi.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien-tuxedo-vang-kem-vien-chi.jpg"
+    ],
+    colors: [
+      { name: "Trắng Kem", hex: "#f5f5dc" },
+      { name: "Be Cát", hex: "#e5dccb" },
+      { name: "Ghi Xám Nhạt", hex: "#d1d5db" }
+    ],
+    description: "Thiết kế dáng Tuxedo đặc trưng với thành tay và tựa lưng cùng chiều cao vuông góc thanh lịch. Bề mặt bên trong được rút cúc quả trám đều đặn kết hợp đường viền chỉ đen nổi bật chạy dọc theo mép khung, mang đến vẻ đẹp vừa cổ điển vừa hiện đại cho không gian phòng khách trang nhã."
+  },
+  {
+    id: "sofa-tan-co-dien-chesterfield-nhung-xanh-cobalt",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield Nhung Xanh Cobalt Rút Cúc Kèm Gối Họa Tiết",
+    code: "SOFA-TC11",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Dáng Chesterfield hoàng gia tay cuộn tròn bề thế, rút cúc quả trám toàn thân kèm bộ gối trang trí cao cấp",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2300 x 950 x 820 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo định hình vững chắc, chân tiện gỗ tròn sơn bóng cổ điển",
+    cushion: "Mút Việt Nhật nguyên khối nhiều tầng chống xẹp, bề mặt chần cúc múi sâu thủ công tinh xảo",
+    badge: "CHESTERFIELD",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-11-chesterfield-nhung-xanh-cobalt.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-11-chesterfield-nhung-xanh-cobalt.jpg"
+    ],
+    colors: [
+      { name: "Xanh Cobalt", hex: "#1d4ed8" },
+      { name: "Xanh Sapphire", hex: "#1e3a8a" },
+      { name: "Xanh Dương Denim", hex: "#2563eb" }
+    ],
+    description: "Mẫu sofa văng Chesterfield mang đậm dấu ấn quý tộc Anh Quốc với gam màu xanh Cobalt lộng lẫy. Toàn bộ tựa lưng và mặt đệm được rút cúc quả trám thủ công tỉ mỉ, tay cuộn tròn uốn lượn bề thế. Đi kèm bộ gối tựa nỉ nhung và gối họa tiết Paisley phong cách cung điện châu Âu, tạo điểm nhấn xa hoa cho phòng khách."
+  },
+  {
+    id: "sofa-tan-co-dien-chesterfield-trang-nga-quy-toc",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield Da Màu Trắng Ngà Quý Tộc",
+    code: "SOFA-TC12",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Thiết kế Chesterfield màu trắng ngà thanh tao, rút cúc sâu lòng tay cuộn, đệm liền khối êm ái sang trọng",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2250 x 920 x 800 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tẩm sấy chống mối mọt, chân tiện gỗ cổ điển thanh lịch",
+    cushion: "Hệ thống đệm mút cao cấp đúc nguyên khối kết hợp lò xo liên hoàn, đệm ngồi nguyên tấm liền mạch",
+    badge: "HOÀNG GIA TRẮNG NGÀ",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-12-chesterfield-trang-nga-quy-toc.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-12-chesterfield-trang-nga-quy-toc.jpg"
+    ],
+    colors: [
+      { name: "Trắng Ngà Ivory", hex: "#f8f6f0" },
+      { name: "Trắng Kem", hex: "#fafaf9" },
+      { name: "Be Sáng", hex: "#f5f5f4" }
+    ],
+    description: "Sự kết hợp hoàn mỹ giữa phom dáng Chesterfield cổ điển và sắc trắng ngà thanh thoát, quý phái. Tựa lưng, tay vịn và yếm ghế được rút cúc quả trám đan xen chuẩn mực, lòng đệm ngồi liền mạch tạo cảm giác bồng bềnh và dễ dàng vệ sinh. Mẫu sofa giúp bừng sáng mọi không gian phòng khách biệt thự, penthouse hay căn hộ tân cổ điển."
+  },
+  {
+    id: "sofa-tan-co-dien-chesterfield-xanh-co-vit-phoi-soc",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield Xanh Cổ Vịt Phối Lưng Vải Kẻ Sọc Quý Tộc",
+    code: "SOFA-TC13",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Độc bản quý tộc phối 2 chất liệu: Lòng ghế da rút cúc xanh cổ vịt và lưng ngoài bọc vải dệt kẻ sọc cung đình",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2200 x 900 x 820 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo định hình vững chãi, chân tiện gỗ sơn nâu hạt dẻ cổ điển",
+    cushion: "Mút đàn hồi đa tầng Việt Nhật êm ái, đệm 2 chỗ ngồi dày dặn chống lún sụt",
+    badge: "ĐỘC BẢN PHỐI VẢI",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-13-chesterfield-xanh-co-vit-phoi-soc.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-13-chesterfield-xanh-co-vit-phoi-soc.jpg"
+    ],
+    colors: [
+      { name: "Xanh Cổ Vịt Petrol", hex: "#0f766e" },
+      { name: "Xanh Rêu Đậm", hex: "#14532d" },
+      { name: "Xanh Peacock", hex: "#155e75" }
+    ],
+    description: "Mẫu thiết kế mang phong cách nghệ thuật độc bản dành riêng cho gia chủ yêu thích sự khác biệt. Mặt trước được bọc da màu xanh cổ vịt rút cúc quả trám sang trọng, trong khi mặt sau và hông ghế được bọc vải dệt sọc hoa văn quý tộc phong cách cung đình châu Âu. Bố trí ở vị trí trung tâm phòng khách sẽ khoe trọn vẹn vẻ đẹp 360 độ từ mọi góc nhìn."
+  },
+  {
+    id: "sofa-tan-co-dien-chesterfield-nhung-xanh-royal-navy",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield Nhung Xanh Royal Navy Viền Đinh Tán",
+    code: "SOFA-TC14",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Bọc vải nỉ nhung tuyết xanh Royal Navy sâu thẳm, tay cuộn đính đinh tán đồng thủ công sắc nét",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2100 x 900 x 800 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo sấy khô chống ẩm mốc, chân tiện gỗ tiện tròn cổ điển",
+    cushion: "Mút nguyên khối đàn hồi cao kết hợp lớp lông vũ êm ái, đệm đôi ngồi thoải mái",
+    badge: "ROYAL VELVET",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-14-chesterfield-nhung-xanh-royal-navy.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-14-chesterfield-nhung-xanh-royal-navy.jpg"
+    ],
+    colors: [
+      { name: "Xanh Royal Navy", hex: "#172554" },
+      { name: "Xanh Khổng Tước", hex: "#1e3a5f" },
+      { name: "Xanh Midnight", hex: "#0f172a" }
+    ],
+    description: "Vẻ đẹp huyền bí và quyền lực toát ra từ chất liệu nỉ nhung tuyết màu xanh Royal Navy thượng hạng. Viền tay cuộn được đóng đinh tán đồng thủ công từng chiếc một tạo đường nét khỏe khoắn, bề thế. Chất nhung mềm mượt bắt sáng tinh tế theo từng góc độ chiếu sáng, là tâm điểm lôi cuốn ánh nhìn của bất kỳ ai bước vào phòng khách."
+  },
+  {
+    id: "sofa-tan-co-dien-chesterfield-vang-hoang-yen",
+    name: "Sofa Văng Tân Cổ Điển Chesterfield Rút Cúc Toàn Thân Màu Vàng Hoàng Yến",
+    code: "SOFA-TC15",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Gam màu vàng hoàng yến ấm áp vương giả, kỹ thuật chần múi trám toàn bộ đệm và lòng ghế tinh xảo",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "2200 x 920 x 800 mm (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo định hình vững vàng, chân tiện gỗ sơn đen bóng quyền quý",
+    cushion: "Mút đàn hồi cao đúc nguyên tấm, bề mặt đệm ngồi chần cúc múi sâu tạo độ thông thoáng và đàn hồi cực tốt",
+    badge: "VƯƠNG GIẢ GOLD",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-15-chesterfield-vang-hoang-yen.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-15-chesterfield-vang-hoang-yen.jpg"
+    ],
+    colors: [
+      { name: "Vàng Hoàng Yến", hex: "#eab308" },
+      { name: "Vàng Mustard Mù Tạt", hex: "#ca8a04" },
+      { name: "Vàng Nâu Caramen", hex: "#b45309" }
+    ],
+    description: "Biểu tượng của sự ấm no, thịnh vượng và sung túc với gam màu vàng hoàng yến bắt mắt. Kỹ thuật rút cúc quả trám bao phủ trọn vẹn từ lưng, tay vịn cho đến toàn bộ bề mặt đệm ngồi, vừa tạo điểm nhấn thị giác đẳng cấp vừa mang lại độ thông thoáng êm ái tối đa khi ngồi thư giãn."
+  },
+
+
   // 5. Mẫu đệm
   {
     id: "mau-dem-multi-layer",
@@ -1118,7 +1490,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "Cắt may đo theo đúng kích thước sofa của khách",
-    material: "Áo đệm bọc Da hoặc Nỉ (Tháo rời giặt hoặc bọc liền)",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Áo lót vải cotton thoáng khí",
     cushion: "Mút Việt Nam hoặc Mút Việt Nhật (Tùy chọn đệm ngồi có lò xo hoặc không lò xo)",
     badge: "CHUYÊN ĐỆM SOFA",
@@ -1143,7 +1515,7 @@ const SOFA_DATABASE = [
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
     dimensions: "Gia công theo thông số khung ghế thực tế",
-    material: "Bọc Da hoặc Nỉ cao cấp",
+    material: "Nỉ, Da nhân tạo và Da thật",
     frame: "Khung lò xo cối thép tôi cao tần",
     cushion: "Mút Việt Nhật + Lò xo cối thép đàn hồi nhún êm ái",
     badge: "CÓ LÒ XO",

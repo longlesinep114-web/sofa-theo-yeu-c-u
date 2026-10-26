@@ -1,4 +1,26 @@
 // ANKAR ATELIER - Main Interactive Logic
+  // Đổi màu nhanh ngay trên thẻ sản phẩm
+  window.changeCardColor = function(cardId, src, dotEl) {
+    const card = document.querySelector(`.sofa-product-card[data-id="${cardId}"]`);
+    if (!card) return;
+    const img = card.querySelector('.card-image-wrap img');
+    if (img) {
+      img.style.opacity = '0.5';
+      setTimeout(() => {
+        img.src = src;
+        img.style.opacity = '1';
+      }, 70);
+    }
+    if (dotEl && dotEl.parentElement) {
+      dotEl.parentElement.querySelectorAll('span').forEach(s => {
+        s.style.borderColor = '#ffffff';
+        s.style.transform = 'scale(1)';
+      });
+      dotEl.style.borderColor = 'var(--accent-orange)';
+      dotEl.style.transform = 'scale(1.25)';
+    }
+  };
+
 document.addEventListener("DOMContentLoaded", function () {
   // Đọc danh mục từ URL (#sofa-don, #sofa-chu-l, ?cat=...) hoặc mặc định mở Sofa đơn
   let activeCategory = "sofa-don"; 
@@ -101,7 +123,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               </button>
             </div>
-            <img src="${item.image}" alt="${item.name}" loading="lazy">
+            <img src="${item.image}" alt="${item.name}" loading="lazy" id="cardImg-${item.id}">
+            ${item.gallery && item.gallery.length > 1 ? `
+              <div class="card-color-dots" style="position: absolute; bottom: 8px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 2;" onclick="event.stopPropagation();">
+                ${(item.colors && item.colors.length === item.gallery.length) ? item.colors.map((c, i) => `
+                  <span onclick="event.stopPropagation(); changeCardColor('${item.id}', '${item.gallery[i]}', this)" style="width: 11px; height: 11px; border-radius: 50%; background: ${c.hex}; border: 1.5px solid ${i === 0 ? 'var(--accent-orange)' : '#ffffff'}; box-shadow: 0 1px 4px rgba(0,0,0,0.35); cursor: pointer; display: inline-block; transition: all 0.15s;" title="Chọn màu: ${c.name}"></span>
+                `).join('') : item.gallery.map((g, i) => `
+                  <span onclick="event.stopPropagation(); changeCardColor('${item.id}', '${g}', this)" style="width: 8px; height: 8px; border-radius: 50%; background: ${i === 0 ? 'var(--accent-orange)' : 'rgba(255,255,255,0.7)'}; border: 1px solid rgba(0,0,0,0.2); cursor: pointer; display: inline-block;" title="Ảnh ${i+1}"></span>
+                `).join('')}
+              </div>
+            ` : ''}
           </div>
 
           <div class="card-body">

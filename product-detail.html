@@ -255,9 +255,18 @@
           <span class="font-mono" id="detailCode" style="font-size: 12px; color: var(--text-muted);">// SOFA</span>
         </div>
 
-        <h1 id="detailTitle" style="font-family: var(--font-serif); font-size: 38px; color: var(--text-main); font-weight: 400; line-height: 1.15; margin-bottom: 24px;">
+        <h1 id="detailTitle" style="font-family: var(--font-serif); font-size: 38px; color: var(--text-main); font-weight: 400; line-height: 1.15; margin-bottom: 18px;">
           Sofa May Đo Cao Cấp
         </h1>
+
+        <!-- Tùy Chọn Màu Sắc Trực Tiếp (bấm để xem đổi màu) -->
+        <div id="detailColorsWrapper" style="display: none; margin-bottom: 22px;">
+          <div style="font-size: 13px; font-weight: 700; color: var(--text-main); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <span>TÙY CHỌN MÀU SẮC:</span>
+            <span id="currentColorName" style="color: var(--accent-orange); font-weight: 600;"></span>
+          </div>
+          <div id="detailColorsList" style="display: flex; gap: 10px; flex-wrap: wrap;"></div>
+        </div>
 
                 <!-- Nút Tư Vấn Ngay kết nối Zalo -->
         <div style="margin-bottom: 26px;">
@@ -289,7 +298,7 @@
             </tr>
             <tr>
               <th>Chất Liệu Bọc:</th>
-              <td id="tableMaterial">Chất liệu Da hoặc Nỉ cao cấp (50+ màu tùy chọn)</td>
+              <td id="tableMaterial">Nỉ, Da nhân tạo và Da thật</td>
             </tr>
             <tr>
               <th>Báo Giá:</th>
@@ -333,7 +342,7 @@
 
   <div class="ankar-toast" id="ankarToast">Thông báo</div>
 
-  <script src="assets/js/data.js?v=20261024_10"></script>
+  <script src="assets/js/data.js?v=1793030172"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       try {
@@ -389,6 +398,30 @@
           zaloBtn.title = `Tư Vấn Zalo: ${product.name}`;
         }
 
+                // Hiển thị bộ chọn màu sắc tương tác
+        const colorsWrapper = document.getElementById("detailColorsWrapper");
+        const colorsList = document.getElementById("detailColorsList");
+        const currentColorName = document.getElementById("currentColorName");
+
+        if (product.colors && product.colors.length > 0) {
+          if (colorsWrapper) colorsWrapper.style.display = "block";
+          if (currentColorName) currentColorName.innerText = product.colors[0].name;
+          if (colorsList) {
+            colorsList.innerHTML = product.colors.map((c, i) => `
+              <button type="button" class="color-chip-btn ${i === 0 ? 'active' : ''}" 
+                data-idx="${i}" 
+                onclick="selectDetailColor(${i})" 
+                style="display: flex; align-items: center; gap: 8px; padding: 6px 14px; border: 1.5px solid ${i === 0 ? 'var(--accent-orange)' : '#e2e8f0'}; border-radius: 30px; background: #fff; cursor: pointer; transition: all 0.2s;"
+                title="Chọn màu: ${c.name}">
+                <span style="width: 16px; height: 16px; border-radius: 50%; background: ${c.hex}; border: 1px solid rgba(0,0,0,0.15); display: inline-block;"></span>
+                <span style="font-size: 12.5px; font-weight: 600; color: var(--text-main);">${c.name}</span>
+              </button>
+            `).join("");
+          }
+        } else {
+          if (colorsWrapper) colorsWrapper.style.display = "none";
+        }
+
         const thumbsContainer = document.getElementById("detailGalleryThumbs");
         const prevArrow = document.getElementById("detailPrevArrow");
         const nextArrow = document.getElementById("detailNextArrow");
@@ -442,6 +475,51 @@
       });
       const badge = document.getElementById("galleryIndexBadge");
       if (badge) badge.innerText = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
+
+      // Đồng bộ chip màu tương ứng nếu có
+      const currentUrl = currentGallery[currentGalleryIndex];
+      const p = (typeof SOFA_DATABASE !== "undefined") ? SOFA_DATABASE.find(item => item.id === productId) : null;
+      if (p && p.colors) {
+        let matchIdx = p.colors.findIndex(c => c.image === currentUrl);
+        if (matchIdx === -1 && p.colors[currentGalleryIndex]) matchIdx = currentGalleryIndex;
+        if (matchIdx !== -1) {
+          const currentColorName = document.getElementById("currentColorName");
+          if (currentColorName && p.colors[matchIdx]) currentColorName.innerText = p.colors[matchIdx].name;
+          document.querySelectorAll(".color-chip-btn").forEach((btn, i) => {
+            if (i === matchIdx) {
+              btn.style.borderColor = "var(--accent-orange)";
+              btn.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.2)";
+            } else {
+              btn.style.borderColor = "#e2e8f0";
+              btn.style.boxShadow = "none";
+            }
+          });
+        }
+      }
+    }
+
+    function selectDetailColor(colorIdx) {
+      const p = (typeof SOFA_DATABASE !== "undefined") ? SOFA_DATABASE.find(item => item.id === productId) : null;
+      if (!p || !p.colors || !p.colors[colorIdx]) return;
+      const c = p.colors[colorIdx];
+      const currentColorName = document.getElementById("currentColorName");
+      if (currentColorName) currentColorName.innerText = c.name;
+
+      document.querySelectorAll(".color-chip-btn").forEach((btn, i) => {
+        if (i === colorIdx) {
+          btn.style.borderColor = "var(--accent-orange)";
+          btn.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.2)";
+        } else {
+          btn.style.borderColor = "#e2e8f0";
+          btn.style.boxShadow = "none";
+        }
+      });
+
+      if (c.image && currentGallery.includes(c.image)) {
+        updateDetailHero(currentGallery.indexOf(c.image));
+      } else if (currentGallery[colorIdx]) {
+        updateDetailHero(colorIdx);
+      }
     }
 
     function changeDetailImage(el, src) {
