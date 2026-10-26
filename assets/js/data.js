@@ -319,30 +319,30 @@ const SOFA_DATABASE = [
     description: "Đại diện cho phong cách thiết kế tối giản đương đại với các mảng khối vuông vức liền mạch, đường viền may gân nổi bật định hình form dáng vững chãi. Phù hợp cho không gian phòng khách hiện đại, văn phòng cao cấp hoặc studio."
   },
   {
-    id: "sofa-don-08-sofa-don-1-cho-khung-go-cong-navy",
-    name: "Ghế Sofa Đơn 1 Chỗ Bọc Nhung Navy Viền Khung Gỗ Bo Cong",
+    id: "sofa-don-08-houndstooth-da-den-chan-vang",
+    name: "Ghế Sofa Đơn Bọc Da Ý Phối Dạ Houndstooth Chân Mạ PVD Vàng",
     code: "SOFA-D08",
     category: "sofa-don",
     categoryName: "Sofa đơn",
-    subtitle: "Tuyệt tác khung gỗ sồi uốn lượn ôm trọn thân ghế, nỉ nhung sapphire xanh navy quý phái",
+    subtitle: "Dáng Tub Chair bo tròn thượng lưu, da đen phối vải dạ răng sói Houndstooth và chân mạ PVD vàng gold",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "950 x 900 x 920 mm (Chuẩn công thái học ngả lưng thư thái)",
-    material: "Chất liệu Da hoặc Nỉ nhung tuyết cao cấp (Xanh Navy, Nâu Da Bò, Rêu Rừng...)",
-    frame: "Gỗ: Sồi tự nhiên uốn cong mỹ nghệ, kết hợp Gỗ Thông/Keo gia cố",
-    cushion: "Mút Việt Nhật đàn hồi cao (Đệm ngồi có lò xo hoặc không lò xo)",
-    badge: "NGHỆ THUẬT GỖ",
+    dimensions: "850 x 820 x 820 mm (Chuẩn công thái học ngả lưng thư thái)",
+    material: "Chất liệu Da hoặc Nỉ cao cấp phối vải dạ họa tiết Houndstooth (răng sói) kinh điển",
+    frame: "Khung gỗ sồi tự nhiên tẩm sấy định hình vòm cung + Chân & vành đai kim loại mạ PVD vàng",
+    cushion: "Mút Việt Nhật nguyên khối D40 đàn hồi cao (Đệm ngồi phân tán lực êm dịu)",
+    badge: "HOUNDSTOOTH LUXURY",
     isFeatured: true,
-    image: "assets/images/sofa-don/sofa-don-08-sofa-don-1-cho-khung-go-cong-navy.jpg",
+    image: "assets/images/sofa-don/sofa-don-08-houndstooth-da-den-chan-vang.jpg",
     gallery: [
-      "assets/images/sofa-don/sofa-don-08-sofa-don-1-cho-khung-go-cong-navy.jpg"
+      "assets/images/sofa-don/sofa-don-08-houndstooth-da-den-chan-vang.jpg"
     ],
     colors: [
-      { name: "Xanh Navy Sapphire", hex: "#1d2a44" },
-      { name: "Nâu Gỗ Sồi", hex: "#7a4a2b" },
-      { name: "Đỏ Rượu Vang", hex: "#631c26" }
+      { name: "Da Đen Phối Houndstooth", hex: "#1c1c1c" },
+      { name: "Chân Kim Loại Mạ Vàng PVD", hex: "#c5a059" },
+      { name: "Họa Tiết Răng Sói Kinh Điển", hex: "#4a4a4a" }
     ],
-    description: "Sản phẩm sofa đơn 1 chỗ kết hợp đỉnh cao giữa kỹ nghệ mộc bo cong uốn lượn và nghệ thuật bọc đệm êm ái. Khung gỗ sồi lộ diện tạo điểm nhấn nghệ thuật độc bản cho góc đọc sách, phòng làm việc hoặc phòng khách sang trọng."
+    description: "Biểu tượng của phong cách thời trang đương đại giao thoa nội thất xa xỉ. Dáng ghế Tub Chair lưng cong bán nguyệt ôm ấp trọn vẹn sống lưng, bọc da đen tuyền bên ngoài kết hợp lớp đệm vải dạ dệt hoa văn răng sói (Houndstooth) quý phái. Khung vành và 4 chân kim loại mạ PVD vàng ánh kim mang đến vẻ đẹp quyền lực cho phòng khách, phòng làm việc hay sảnh đón khách sang trọng."
   },
   {
     id: "sofa-don-09-vang-doi-be-cat-kem-goi",
@@ -396,58 +396,266 @@ const SOFA_DATABASE = [
     ],
     description: "Thiết kế đột phá với hệ chân đế gỗ tự nhiên bo cong viền quanh đáy, xẻ rãnh cách điệu tại hai bên tay vịn. Đệm mút khối dày êm tạo cảm giác ngồi thư giãn tối đa, mang lại vẻ đẹp đậm chất nghệ thuật châu Âu đương đại."
   },
-
   {
-    id: "sofa-don-11-tron-tub-bo-cong-xanh-reu",
-    name: "Ghế Sofa Đơn Tròn Tub Bo Cong Phối Màu Xanh Rêu & Be Sữa",
+    id: "sofa-don-12-houndstooth-da-kem-thuc-te-xuong",
+    name: "Ghế Sofa Đơn Da Kem Phối Houndstooth Hoàn Thiện Tận Xưởng",
     code: "SOFA-D11",
     category: "sofa-don",
     categoryName: "Sofa đơn",
-    subtitle: "Tạo hình cánh cung ôm trọn cơ thể, phối 2 tone xanh rêu & be sang trọng, kèm 2 gối tựa họa tiết quả trám",
+    subtitle: "Ảnh chụp thực tế sản phẩm hoàn thiện tại xưởng may đo: Da màu kem trắng thanh lịch phối đệm Houndstooth cao cấp",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "920 x 880 x 800 mm (Đặt làm theo kích thước không gian)",
-    material: "Chất liệu Da hoặc Nỉ cao cấp đan dệt dày dặn (Xanh Rêu, Be Sữa, Nâu Đất...)",
-    frame: "Gỗ: Sồi, Thông, Keo sấy khô kiên cố, chân kim loại sơn tĩnh điện",
-    cushion: "Mút Việt Nam hoặc Việt Nhật (Đệm ngồi có lò xo hoặc không lò xo)",
-    badge: "THIẾT KẾ Ý",
+    dimensions: "850 x 820 x 820 mm (Gia công may đo theo kích thước yêu cầu)",
+    material: "Chất liệu Da hoặc Nỉ nhập khẩu màu kem trắng kết hợp vải dạ kẻ Houndstooth dệt thủ công",
+    frame: "Khung gỗ tự nhiên tẩm sấy chống cong vênh mối mọt + Chân kim loại mạ vàng sang trọng",
+    cushion: "Đệm mút Việt Nhật đúc nguyên khối chống xẹp lún, êm ái vượt trội",
+    badge: "THỰC TẾ TẠI XƯỞNG",
     isFeatured: true,
-    image: "assets/images/sofa-don/sofa-don-11-tron-tub-bo-cong-xanh-reu.jpg",
+    image: "assets/images/sofa-don/sofa-don-12-houndstooth-da-kem-thuc-te-xuong.jpg",
     gallery: [
-      "assets/images/sofa-don/sofa-don-11-tron-tub-bo-cong-xanh-reu.jpg"
+      "assets/images/sofa-don/sofa-don-12-houndstooth-da-kem-thuc-te-xuong.jpg"
     ],
     colors: [
-      { name: "Xanh Rêu Sage", hex: "#5b6e4e" },
-      { name: "Be Sữa", hex: "#e7e0d3" },
-      { name: "Nâu Đất", hex: "#634735" }
+      { name: "Da Màu Kem Trắng", hex: "#f0ece1" },
+      { name: "Đệm Kẻ Houndstooth Tinh Tế", hex: "#3a3a3a" },
+      { name: "Chân Đế Mạ Vàng PVD", hex: "#c5a059" }
     ],
-    description: "Ghế sofa đơn phong cách Tub Chair thời thượng với tựa lưng bo cong ôm trọn người ngồi, phối màu tương phản tinh tế giữa nỉ xanh rêu và đệm be sữa. Tặng kèm 2 gối tựa dệt họa tiết hình học sang trọng, chân đế kim loại thanh mảnh kiên cố."
+    description: "Sản phẩm thực tế được gia công trực tiếp tại xưởng Sofa Ankar. Từng đường kim mũi chỉ bo viền đệm, góc uốn lượn của tay ghế và độ khít của khung chân mạ vàng đều đạt tiêu chuẩn thẩm mỹ khắt khe. Tông màu da kem trắng phối vải dạ răng sói thanh nhã tạo cảm giác nhẹ nhàng, ấm áp và đẳng cấp cho không gian sống hiện đại."
   },
   {
-    id: "sofa-don-12-bac-au-tua-ranh-soc-tay-go",
-    name: "Ghế Sofa Đơn Bắc Âu Tựa Rãnh Sọc Viền Tay Gỗ Tự Nhiên",
+    id: "sofa-don-13-track-arm-be-cat",
+    name: "Ghế Sofa Đơn Khối Hộp Track Arm Vải Dệt Be Cát",
     code: "SOFA-D12",
     category: "sofa-don",
     categoryName: "Sofa đơn",
-    subtitle: "Tựa lưng may chần rãnh sọc dọc tinh xảo, ốp viền tay và chân gỗ sồi tự nhiên bo cong mịn màng",
+    subtitle: "Dáng hộp vuông vắn tối giản đương đại, đệm ngồi sâu êm ái, bọc vải dệt thô màu be cát ấm cúng",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "880 x 850 x 880 mm (Chuẩn công thái học ngả lưng thư thái)",
-    material: "Chất liệu Da hoặc Nỉ thô cao cấp (Ghi Xám Đậm, Xanh Denim, Vàng Bò...)",
-    frame: "Gỗ: Sồi, Thông, Keo kết hợp tay vịn & chân tiện gỗ sồi tự nhiên sơn PU",
-    cushion: "Mút Việt Nam hoặc Việt Nhật đàn hồi cao (Có lò xo hoặc không lò xo)",
-    badge: "BẮC ÂU CỔ ĐIỂN",
+    dimensions: "880 x 900 x 850 mm (Rộng 88cm x Sâu 90cm x Cao 85cm)",
+    material: "Chất liệu Da hoặc Nỉ dệt sợi thoáng khí cao cấp (Be Cát, Nâu Đất, Xám Khói...)",
+    frame: "Gỗ: Sồi, Thông, Keo tẩm sấy tiêu chuẩn chống cong vênh mối mọt",
+    cushion: "Mút Việt Nhật nguyên khối D40 đàn hồi cao (Đệm ngồi phân tán lực êm ái)",
+    badge: "TỐI GIẢN HIỆN ĐẠI",
     isFeatured: true,
-    image: "assets/images/sofa-don/sofa-don-12-bac-au-tua-ranh-soc-tay-go.jpg",
+    image: "assets/images/sofa-don/sofa-don-13-track-arm-be-cat.jpg",
     gallery: [
-      "assets/images/sofa-don/sofa-don-12-bac-au-tua-ranh-soc-tay-go.jpg"
+      "assets/images/sofa-don/sofa-don-13-track-arm-be-cat.jpg"
     ],
     colors: [
-      { name: "Ghi Xám Denim", hex: "#3e4854" },
-      { name: "Nâu Gỗ Sồi Tự Nhiên", hex: "#9b673c" },
-      { name: "Xanh Khói", hex: "#5b6d7a" }
+      { name: "Be Cát Tự Nhiên", hex: "#d8cfc4" },
+      { name: "Nâu Đất Mocha", hex: "#7d6b5c" },
+      { name: "Ghi Xám Nhạt", hex: "#c2c5c8" }
     ],
-    description: "Sự kết hợp tinh tế giữa nghệ thuật bọc nỉ chần rãnh sọc dọc ôm trọn sống lưng và chi tiết tay vịn gỗ sồi uốn lượn ấm cúng. Thiết kế Bắc Âu thanh lịch, thích hợp làm ghế thư giãn đọc sách, ghế tiếp khách phòng giám đốc hoặc điểm nhấn phòng ngủ master."
+    description: "Mẫu sofa đơn sở hữu phom dáng Track Arm kinh điển với các đường nét vuông vức liền mạch từ tay vịn đến tựa lưng. Lòng ghế sâu cùng đệm mút đúc dày dặn tạo cảm giác tựa lưng thoải mái, màu be cát trung tính dễ dàng hòa hợp với mọi phong cách nội thất hiện đại hay tối giản."
+  },
+  {
+    id: "sofa-don-14-tay-ban-rong-xam-ghi-kem-goi",
+    name: "Ghế Sofa Đơn Hiện Đại Tay Bản Rộng Chân Kim Loại Kèm Gối Tựa",
+    code: "SOFA-D13",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Tay vịn bản to bề thế, vải dệt sợi melange xám ghi thanh lịch, chân kim loại mạ chrome sáng bóng",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "920 x 880 x 830 mm (Rộng 92cm x Sâu 88cm x Cao 83cm)",
+    material: "Chất liệu Da hoặc Nỉ dệt sợi chéo melange cao cấp chống xù xước",
+    frame: "Khung gỗ tự nhiên gia cố góc chịu lực + Chân kim loại trụ tròn mạ chrome/inox",
+    cushion: "Hệ đệm mút Việt Nhật đa tầng kèm gối tựa lưng êm ái phân tán áp lực",
+    badge: "THANH LỊCH",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-14-tay-ban-rong-xam-ghi-kem-goi.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-14-tay-ban-rong-xam-ghi-kem-goi.jpg"
+    ],
+    colors: [
+      { name: "Xám Ghi Melange", hex: "#9da1a6" },
+      { name: "Xanh Denim Nhạt", hex: "#6a7b8c" },
+      { name: "Kem Sữa", hex: "#e5dfd5" }
+    ],
+    description: "Thiết kế sofa đơn hiện đại với phần tay vịn bản to vững chãi và đường viền gân chỉ bo cạnh sắc sảo. Tặng kèm gối ôm vuông đồng bộ, kết hợp chân trụ kim loại mạ chrome sáng loáng mang lại vẻ đẹp năng động, lịch thiệp cho phòng tiếp khách hoặc không gian căn hộ."
+  },
+  {
+    id: "sofa-don-15-duong-dai-xanh-sage-vien-trang",
+    name: "Ghế Sofa Đơn Đương Đại Bo Viền Chỉ Trắng Chân Đen Bọc Đồng",
+    code: "SOFA-D14",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Màu xanh bơ Sage thời thượng nhấn gân chỉ trắng tương phản, chân kim loại sơn tĩnh điện bọc đồng vàng",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "860 x 860 x 820 mm (Rộng 86cm x Sâu 86cm x Cao 82cm)",
+    material: "Vải dệt nỉ cao cấp màu xanh Sage phối viền piping chỉ trắng nổi bật",
+    frame: "Gỗ tự nhiên tẩm sấy + Gầm khung thép sơn tĩnh điện đen phối đầu chân bọc đồng PVD",
+    cushion: "Mút đúc tỷ trọng cao kết hợp lò xo túi độc lập êm dịu",
+    badge: "ĐƯƠNG ĐẠI",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-15-duong-dai-xanh-sage-vien-trang.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-15-duong-dai-xanh-sage-vien-trang.jpg"
+    ],
+    colors: [
+      { name: "Xanh Bơ Sage Green", hex: "#93a290" },
+      { name: "Trắng Sữa Viền Gân", hex: "#f4f3ef" },
+      { name: "Đồng Vàng PVD", hex: "#c5a059" }
+    ],
+    description: "Mẫu ghế hội tụ tinh hoa thiết kế nội thất đương đại của Ý với chi tiết viền gân nổi (contrast piping) màu trắng sắc nét chạy dọc tay vịn và đệm ngồi. Khung chân kim loại màu đen mảnh mai kết thúc bằng đầu bọc đồng vàng gold tạo điểm chạm thị giác đẳng cấp."
+  },
+  {
+    id: "sofa-don-16-xoay-360-boucle-trang-kem",
+    name: "Ghế Sofa Đơn Xoay 360 Độ Nỉ Lông Cừu Bouclé Đế Gỗ Tự Nhiên",
+    code: "SOFA-D15",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Cơ chế xoay 360 độ linh hoạt, bề mặt nỉ xù Bouclé bồng bềnh êm ái, đế gỗ sồi tròn tự nhiên",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "820 x 850 x 860 mm (Đường kính xoay linh hoạt)",
+    material: "Vải nỉ Bouclé (lông cừu xoăn) mềm mịn nhập khẩu, thoáng khí, chống bám bụi",
+    frame: "Khung gỗ uốn cong công nghệ cao + Trục xoay bi thép chịu tải 360 độ và đế gỗ sồi sơn màu óc chó",
+    cushion: "Mút nguyên khối lông vũ nhân tạo bao bọc đệm D40 siêu đàn hồi",
+    badge: "GHẾ XOAY 360°",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-16-xoay-360-boucle-trang-kem.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-16-xoay-360-boucle-trang-kem.jpg"
+    ],
+    colors: [
+      { name: "Trắng Kem Bouclé", hex: "#f3ede3" },
+      { name: "Đế Gỗ Óc Chó Walnut", hex: "#4a3525" },
+      { name: "Be Ngà Ấm", hex: "#e2d9cd" }
+    ],
+    description: "Chiếc ghế bành xoay thư giãn đỉnh cao dành cho góc đọc sách, phòng ngủ hay phòng khách biệt thự. Bọc toàn bộ bằng chất vải Bouclé lông cừu tuyết mềm mịn như mây, tích hợp trục xoay 360 độ êm ru không tiếng động trên đế gỗ tròn thủ công tinh tế."
+  },
+  {
+    id: "sofa-don-17-banh-sau-nau-hat-de-dem-doi",
+    name: "Ghế Sofa Đơn Dáng Bành Sâu Cỡ Lớn Kèm Đệm Tựa Lưng Đôi",
+    code: "SOFA-D16",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Lòng ngồi sâu rộng rãi thoải mái tựa ngả, chất vải dệt thô màu nâu hạt dẻ ấm cúng, đệm tựa kép nâng niu sống lưng",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "1000 x 980 x 800 mm (Dáng bành cỡ đại thư giãn tối đa)",
+    material: "Vải dệt thô sợi linen/cotton tự nhiên màu nâu hạt dẻ mộc mạc bền bỉ",
+    frame: "Khung gỗ tự nhiên bản dày chịu lực cao, chân đế giấu gầm thanh thoát",
+    cushion: "Hệ đệm kép kết hợp mút D40 và gối lông vũ phồng êm ái",
+    badge: "DEEP SEAT COMFORT",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-17-banh-sau-nau-hat-de-dem-doi.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-17-banh-sau-nau-hat-de-dem-doi.jpg"
+    ],
+    colors: [
+      { name: "Nâu Hạt Dẻ Khaki", hex: "#8c7d6e" },
+      { name: "Xám Than Chì", hex: "#3f434a" },
+      { name: "Be Cát Thô", hex: "#cec6ba" }
+    ],
+    description: "Mẫu ghế bành cỡ lớn được thiết kế dành riêng cho những ai yêu thích sự thư giãn tuyệt đối. Lòng ngồi sâu tới gần 1 mét với tựa lưng hai lớp giúp bạn có thể cuộn tròn đọc sách, thư giãn xem phim hay ngả lưng nghỉ ngơi thoải mái cả ngày."
+  },
+  {
+    id: "sofa-don-17-herringbone-dinh-tan-co-dien",
+    name: "Ghế Sofa Đơn Bọc Vải Họa Tiết Xương Cá Tán Đinh Đồng Cổ Điển",
+    code: "SOFA-D17",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Họa tiết dệt xương cá Herringbone trang nhã, viền đinh đồng tán thủ công tinh tế, đệm tựa lưng phồng êm ái",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "880 x 860 x 860 mm (Rộng 88cm x Sâu 86cm x Cao 86cm)",
+    material: "Vải dệt thô hoa văn Herringbone (xương cá) nhập khẩu cao cấp, đinh đồng trang trí viền tay",
+    frame: "Gỗ sồi tự nhiên tẩm sấy công nghệ cao chống cong vênh mối mọt, chân gỗ đặc tiện khối",
+    cushion: "Mút đúc Việt Nhật D40 đàn hồi cao, tựa lưng phồng lông vũ nhân tạo",
+    badge: "TÁN ĐINH ĐỒNG",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-17-herringbone-dinh-tan-co-dien.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-17-herringbone-dinh-tan-co-dien.jpg"
+    ],
+    colors: [
+      { name: "Be Vàng Herringbone", hex: "#d8c7b3" },
+      { name: "Nâu Gỗ Tự Nhiên", hex: "#4a3525" },
+      { name: "Đinh Đồng Cổ Điển", hex: "#8c6b3e" }
+    ],
+    description: "Mẫu ghế mang đậm hơi thở quý tộc Anh Quốc đương đại với họa tiết dệt xương cá Herringbone ấm áp và đường viền tán đinh đồng thủ công tỉ mỉ chạy dọc từ tay vịn xuống chân ghế. Đệm ngồi dày dặn kết hợp tựa lưng ngả êm ái mang đến không gian đọc sách và thư giãn quý phái."
+  },
+  {
+    id: "sofa-don-18-scandinavian-xanh-bac-ha",
+    name: "Ghế Sofa Đơn Bắc Âu Vải Dệt Xanh Bạc Hà Chân Kim Loại Mạ Chrome",
+    code: "SOFA-D18",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Thiết kế Scandinavian thanh thoát với 2 phiên bản màu (Xanh Bạc Hà & Xanh Lam Denim), chân kim loại mạ chrome sáng gương",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "850 x 820 x 780 mm (Rộng 85cm x Sâu 82cm x Cao 78cm)",
+    material: "Vải dệt sợi cotton linen màu xanh bạc hà (Mint Pastel) thoáng khí và êm ái",
+    frame: "Khung gỗ tự nhiên gia cố chịu lực + Chân khung kim loại chữ U mạ chrome bóng gương",
+    cushion: "Đệm mút Việt Nhật nguyên khối kết hợp lò xo giàn trợ lực đàn hồi bền bỉ",
+    badge: "BẮC ÂU HIỆN ĐẠI",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-18-scandinavian-xanh-bac-ha.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-18-scandinavian-xanh-bac-ha.jpg",
+      "assets/images/sofa-don/sofa-don-18-scandinavian-xanh-lam-denim.jpg"
+    ],
+    colors: [
+      { name: "Xanh Bạc Hà (Mint)", hex: "#8fb2a6" },
+      { name: "Xanh Lam Đậm (Denim Blue)", hex: "#4a6782" },
+      { name: "Kim Loại Chrome Sáng", hex: "#d6dade" }
+    ],
+    description: "Nét đẹp thuần khiết của phong cách Bắc Âu thể hiện qua phom dáng thanh thoát, màu xanh bạc hà dịu mát cùng hệ chân kim loại mạ chrome bóng gương sang trọng. Thích hợp cho phòng khách căn hộ hiện đại, văn phòng sáng tạo hay góc thư giãn bên cửa sổ."
+  },
+  {
+    id: "sofa-don-19-bo-cong-xanh-coban",
+    name: "Ghế Sofa Đơn Hiện Đại Dáng Liền Khối Bọc Vải Xanh Coban Hoàng Gia",
+    code: "SOFA-D19",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Đường nét bo cong mềm mại liền khối tựa - tay, sắc xanh coban quyền quý nổi bật, chân thanh mảnh sơn đen tĩnh điện",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "820 x 840 x 800 mm (Rộng 82cm x Sâu 84cm x Cao 80cm)",
+    material: "Vải nỉ nhung dệt sợi cao cấp màu xanh Coban / Royal Blue rực rỡ, bề mặt mềm mịn",
+    frame: "Khung gỗ tự nhiên uốn cong định hình + 4 chân kim loại côn sơn tĩnh điện đen mờ",
+    cushion: "Mút định hình công nghệ cao ôm khít từng đường cong cơ thể khi tựa ngả",
+    badge: "XANH HOÀNG GIA",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-19-bo-cong-xanh-coban.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-19-bo-cong-xanh-coban.jpg"
+    ],
+    colors: [
+      { name: "Xanh Coban Royal Blue", hex: "#2b4594" },
+      { name: "Đen Mờ Tĩnh Điện", hex: "#1e2229" },
+      { name: "Xanh Denim", hex: "#435d8a" }
+    ],
+    description: "Mẫu ghế tạo điểm nhấn thị giác mạnh mẽ với sắc xanh Coban quý tộc và phom dáng bo tròn liền mạch hiện đại. Phần khoét nhẹ tinh tế giữa lưng và đệm tạo cảm giác bay bổng, chân kim loại thanh mảnh nhưng vô cùng kiên cố, hoàn hảo cho không gian tiếp khách ấn tượng."
+  },
+  {
+    id: "sofa-don-20-mid-century-da-xanh-ngoc",
+    name: "Ghế Sofa Đơn Da Ý Chần Ô Vuông Phong Cách Mid-Century Màu Xanh Ngọc",
+    code: "SOFA-D20",
+    category: "sofa-don",
+    categoryName: "Sofa đơn",
+    subtitle: "Da bò/Microfiber màu xanh ngọc pastel cao cấp, kỹ thuật may chần ô vuông tinh xảo, chân gỗ sồi tiện côn dáng Mid-Century",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "860 x 850 x 820 mm (Rộng 86cm x Sâu 85cm x Cao 82cm)",
+    material: "Chất liệu Da Ý hoặc Da Microfiber cao cấp mềm êm màu xanh ngọc pastel (Baby Blue)",
+    frame: "Khung gỗ Sồi/Keo sấy khô định hình + 4 chân gỗ sồi tự nhiên tiện côn sơn màu óc chó",
+    cushion: "Mút khối D40 may chần chỉ rãnh ô vuông dập phồng chống xẹp lún",
+    badge: "MID-CENTURY",
+    isFeatured: true,
+    image: "assets/images/sofa-don/sofa-don-20-mid-century-da-xanh-ngoc.jpg",
+    gallery: [
+      "assets/images/sofa-don/sofa-don-20-mid-century-da-xanh-ngoc.jpg"
+    ],
+    colors: [
+      { name: "Da Xanh Ngọc Pastel", hex: "#9ec0ca" },
+      { name: "Nâu Gỗ Óc Chó", hex: "#523928" },
+      { name: "Trắng Sữa", hex: "#f0ede6" }
+    ],
+    description: "Tác phẩm mang hơi thở phong cách thiết kế Mid-Century Modern kinh điển của thập niên 60 với họa tiết chần ô vuông kỷ hà trên cả đệm ngồi và tựa lưng. Bọc da Ý cao cấp màu xanh ngọc thanh khiết kết hợp chân gỗ tiện côn thanh nhã, tôn vinh nét thẩm mỹ tao nhã vượt thời gian."
   },
 
   // 3. Các mẫu ghế thư giãn

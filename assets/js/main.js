@@ -138,18 +138,59 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalCloseBtn = document.getElementById("modalCloseBtn");
   const modalContentPane = document.getElementById("modalContentPane");
 
+  let modalGalleryList = [];
+  let modalCurrentIdx = 0;
+
+  window.setModalMainImage = function(idx) {
+    if (!modalGalleryList.length) return;
+    modalCurrentIdx = (idx + modalGalleryList.length) % modalGalleryList.length;
+    const img = document.getElementById("modalMainImg");
+    if (img) {
+      img.style.opacity = "0.5";
+      setTimeout(() => {
+        img.src = modalGalleryList[modalCurrentIdx];
+        img.style.opacity = "1";
+      }, 80);
+    }
+    document.querySelectorAll(".modal-thumb-item").forEach((thumb, i) => {
+      if (i === modalCurrentIdx) {
+        thumb.style.borderColor = "var(--accent-orange)";
+        thumb.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.25)";
+      } else {
+        thumb.style.borderColor = "var(--border-light)";
+        thumb.style.boxShadow = "none";
+      }
+    });
+    const badge = document.getElementById("modalGalleryBadge");
+    if (badge) badge.innerText = `${modalCurrentIdx + 1} / ${modalGalleryList.length}`;
+  };
+
   function openQuickViewModal(productId) {
     const p = SOFA_DATABASE.find(item => item.id === productId);
     if (!p || !modalOverlay) return;
 
+    modalGalleryList = (p.gallery && p.gallery.length) ? p.gallery : [p.image];
+    modalCurrentIdx = 0;
+
     modalContentPane.innerHTML = `
-      <div class="modal-gallery-pane">
-        <img id="modalMainImg" src="${p.image}" alt="${p.name}">
-        <div style="display: flex; gap: 8px; margin-top: 12px;">
-          ${p.gallery.map(imgUrl => `
-            <img src="${imgUrl}" style="width: 64px; height: 50px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid var(--border-light);" onclick="document.getElementById('modalMainImg').src='${imgUrl}'">
-          `).join("")}
+      <div class="modal-gallery-pane" style="position: relative;">
+        <div style="position: relative; overflow: hidden; border-radius: 8px; background: #f8fafc; height: 360px; display: flex; align-items: center; justify-content: center;" id="modalImgContainer">
+          <img id="modalMainImg" src="${modalGalleryList[0]}" alt="${p.name}" style="width: 100%; height: 100%; object-fit: contain; cursor: pointer; transition: opacity 0.2s ease;" title="Bấm hoặc vuốt để xem màu khác">
+          ${modalGalleryList.length > 1 ? `
+            <div id="modalGalleryBadge" style="position: absolute; bottom: 10px; right: 10px; background: rgba(15,23,42,0.72); color: #fff; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 12px; pointer-events: none;">
+              1 / ${modalGalleryList.length}
+            </div>
+            <button type="button" onclick="event.stopPropagation(); window.setModalMainImage(modalCurrentIdx - 1)" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.9); border: 1px solid var(--border-light); cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">&#10094;</button>
+            <button type="button" onclick="event.stopPropagation(); window.setModalMainImage(modalCurrentIdx + 1)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.9); border: 1px solid var(--border-light); cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">&#10095;</button>
+          ` : ''}
         </div>
+        ${modalGalleryList.length > 1 ? `
+          <div style="display: flex; gap: 8px; margin-top: 12px;">
+            ${modalGalleryList.map((imgUrl, idx) => `
+              <img src="${imgUrl}" class="modal-thumb-item" style="width: 64px; height: 50px; object-fit: contain; background: #f8fafc; border-radius: 4px; cursor: pointer; border: 2px solid ${idx === 0 ? 'var(--accent-orange)' : 'var(--border-light)'}; transition: all 0.2s ease;" onclick="window.setModalMainImage(${idx})">
+            `).join("")}
+          </div>
+        ` : ''}
       </div>
       <div class="modal-details-pane">
         <div style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-orange); font-weight: 700; margin-bottom: 6px;">// MÃ SẢN PHẨM: ${p.code}</div>
@@ -175,6 +216,27 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     `;
+
+    // Touch swipe on modal image
+    const container = document.getElementById("modalImgContainer");
+    if (container && modalGalleryList.length > 1) {
+      let mTouchStartX = 0;
+      let mTouchEndX = 0;
+      container.addEventListener("touchstart", e => {
+        mTouchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      container.addEventListener("touchend", e => {
+        mTouchEndX = e.changedTouches[0].screenX;
+        const diff = mTouchStartX - mTouchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) window.setModalMainImage(modalCurrentIdx + 1);
+          else window.setModalMainImage(modalCurrentIdx - 1);
+        }
+      }, { passive: true });
+      container.addEventListener("click", () => {
+        window.setModalMainImage(modalCurrentIdx + 1);
+      });
+    }
 
     modalOverlay.classList.add("open");
   }
