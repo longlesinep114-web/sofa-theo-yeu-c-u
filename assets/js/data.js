@@ -1479,55 +1479,136 @@ const SOFA_DATABASE = [
   },
 
 
-  // 5. Mẫu đệm
+    // 5. Mẫu đệm - 5 MẪU THỰC TẾ THEO ẢNH NGƯỜI DÙNG TẢI LÊN
   {
-    id: "mau-dem-multi-layer",
-    name: "Mẫu Đệm Mút Việt Nhật Đàn Hồi Cao",
+    id: "dem-01-sofa-go-goc-l-da-navy",
+    name: "Bộ Đệm Da Ghế Gỗ Góc Chữ L Hiện Đại Màu Xanh Đen Navy",
     code: "DEM-01",
     category: "mau-dem",
     categoryName: "Mẫu đệm",
-    subtitle: "Cắt may mút đệm theo kích thước sofa, chống xẹp lún",
+    subtitle: "Bộ đệm ghế gỗ chữ L cao cấp, đệm ngồi nguyên khối dày dặn bọc da màu xanh navy sang trọng",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "Cắt may đo theo đúng kích thước sofa của khách",
+    dimensions: "May đo theo kích thước góc L lòng ghế thực tế của gia đình",
     material: "Nỉ, Da nhân tạo và Da thật",
-    frame: "Áo lót vải cotton thoáng khí",
-    cushion: "Mút Việt Nam hoặc Mút Việt Nhật (Tùy chọn đệm ngồi có lò xo hoặc không lò xo)",
-    badge: "CHUYÊN ĐỆM SOFA",
+    frame: "Mút đúc Việt Nhật D40 đàn hồi cao, nguyên khối không ghép vụn",
+    cushion: "Mút đúc tỷ trọng cao chống lún xẹp tuyệt đối, bọc da vi sợi cao cấp dễ lau chùi",
+    badge: "ĐỆM GHẾ GỖ CHỮ L",
     isFeatured: true,
-    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1200&q=80",
+    image: "assets/images/mau-dem/dem-01-sofa-go-goc-l-da-navy.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1200&q=80"
+      "assets/images/mau-dem/dem-01-sofa-go-goc-l-da-navy.jpg"
     ],
     colors: [
-      { name: "Đệm Mút Việt Nhật D40", hex: "#293241" },
-      { name: "Đệm Mút Việt Nam", hex: "#e0fbfc" }
+      { name: "Xanh Navy Đậm", hex: "#1b2a47" },
+      { name: "Đen Than", hex: "#1c1d21" },
+      { name: "Nâu Bò Cổ Điển", hex: "#7c2d12" }
     ],
-    description: "Dịch vụ làm đệm sofa ghế gỗ, bọc mới đệm sofa cũ. Sử dụng mút Việt Nam hoặc mút Việt Nhật tỷ trọng cao, đệm ngồi có lò xo hoặc không lò xo theo yêu cầu."
+    description: "Mẫu đệm may đo chuyên biệt cho bộ ghế sofa gỗ góc chữ L phòng khách. Đệm mút Việt Nhật nguyên khối chống xẹp lún, bọc chất liệu da cao cấp chống thấm nước, dễ dàng lau chùi vệ sinh. Thiết kế ôm sát theo phom ghế gỗ, mang lại cảm giác ngồi êm ái, nâng tầm đẳng cấp không gian sống."
   },
   {
-    id: "mau-dem-latex-hybrid",
-    name: "Mẫu Đệm Tích Hợp Lò Xo Cối Chịu Lực",
+    id: "dem-02-sofa-go-phoi-don-da-cafe",
+    name: "Bộ Đệm Da Ghế Gỗ Phòng Khách Màu Nâu Cà Phê Phối Đôn & Băng Dài",
     code: "DEM-02",
     category: "mau-dem",
     categoryName: "Mẫu đệm",
-    subtitle: "Kết hợp hệ lò xo cối và mút Việt Nhật đàn hồi êm ái",
+    subtitle: "Bộ đệm ghế gỗ gia đình gồm đệm văng dài, đệm ghế đơn và đôn ngồi bọc da nâu cafe ấm cúng",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "Gia công theo thông số khung ghế thực tế",
+    dimensions: "Gia công theo trọn bộ ghế dài, ghế đơn và đôn vuông thực tế",
     material: "Nỉ, Da nhân tạo và Da thật",
-    frame: "Khung lò xo cối thép tôi cao tần",
-    cushion: "Mút Việt Nhật + Lò xo cối thép đàn hồi nhún êm ái",
-    badge: "CÓ LÒ XO",
-    isFeatured: false,
-    image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1200&q=80",
+    frame: "Cốt mút ép định hình mút D40 uốn góc chuẩn xác, phom đứng vuông vức",
+    cushion: "Mút nguyên khối êm ái đàn hồi cao, bọc da công nghiệp cao cấp chống nước",
+    badge: "ĐỆM BỘ GHẾ GỖ PHÒNG KHÁCH",
+    isFeatured: true,
+    image: "assets/images/mau-dem/dem-02-sofa-go-phoi-don-da-cafe.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1200&q=80"
+      "assets/images/mau-dem/dem-02-sofa-go-phoi-don-da-cafe.jpg"
     ],
     colors: [
-      { name: "Đệm Lò Xo Việt Nhật", hex: "#d8c7a6" }
+      { name: "Nâu Cà Phê", hex: "#4a332d" },
+      { name: "Nâu Da Bò", hex: "#8b4513" },
+      { name: "Kem Be", hex: "#e8d8c8" }
     ],
-    description: "Độ bật nảy đàn hồi tốt, nâng đỡ trọng lượng cơ thể phân tán đều, ngồi lâu không bị mỏi."
+    description: "Giải pháp may đo đệm ghế gỗ trọn bộ phòng khách gồm đệm văng dài, ghế đơn và ghế đôn. Màu da nâu cà phê trầm ấm, sang trọng kết hợp hài hòa cùng chất gỗ tự nhiên. Đệm mút D40 đàn hồi cao, đường may bo viền chắc chắn, tạo điểm nhấn ấn tượng cho không gian sum vầy gia đình."
+  },
+  {
+    id: "dem-03-sofa-go-chu-u-da-den",
+    name: "Bộ Đệm Ghế Gỗ Dáng Chữ U Phòng Khách Căn Hộ Màu Đen Sang Trọng",
+    code: "DEM-03",
+    category: "mau-dem",
+    categoryName: "Mẫu đệm",
+    subtitle: "Đệm ghế gỗ bố trí chữ U đẳng cấp, da đen nhẵn bóng cao cấp kèm gối tựa lưng đồng bộ",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "May đo theo kích thước bộ ghế chữ U căn hộ chung cư / biệt thự",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Mút Việt Nhật nguyên khối, cắt CNC định hình theo từng khoang ghế",
+    cushion: "Đệm ngồi dày dặn êm ái, bọc da đen tuyền sang trọng chống bụi bẩn bám dính",
+    badge: "ĐỆM SOFA GỖ CHỮ U",
+    isFeatured: true,
+    image: "assets/images/mau-dem/dem-03-sofa-go-chu-u-da-den.jpg",
+    gallery: [
+      "assets/images/mau-dem/dem-03-sofa-go-chu-u-da-den.jpg"
+    ],
+    colors: [
+      { name: "Đen Tuyền Luxury", hex: "#18181b" },
+      { name: "Ghi Than", hex: "#27272a" },
+      { name: "Nâu Socola", hex: "#3e2723" }
+    ],
+    description: "Bộ đệm ghế gỗ bố trí kiểu dáng chữ U sang trọng cho phòng khách biệt thự và căn hộ cao cấp. Bề mặt da đen cao cấp chống bám bụi, đàn hồi êm ái, chống xẹp lún tối ưu. Mỗi vị trí ngồi được may đo tỉ mỉ khít lòng ghế gỗ, tạo nên vẻ đẹp bề thế, uy nghi và tiện nghi tối đa."
+  },
+  {
+    id: "dem-04-bo-dem-ghe-go-da-bo-kem-goi",
+    name: "Bộ Đệm Ghế Gỗ Đồng Kỵ / Gỗ Cổ Điển Bọc Da Bò Nâu Kèm Gối Tựa",
+    code: "DEM-04",
+    category: "mau-dem",
+    categoryName: "Mẫu đệm",
+    subtitle: "Trọn bộ đệm ngồi và đệm tựa lưng ghế gỗ truyền thống bọc da bò nâu cao cấp, may rút chỉ sắc nét",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Cắt may theo kích thước bộ ghế Đồng Kỵ, ghế voi, ghế tần thuỷ hoàng",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Ruột đệm mút Việt Nhật D40 đàn hồi cao, phom định hình vuông vức",
+    cushion: "Mút đúc dày dặn êm ái, bọc da nâu bò chống trầy xước kèm gối tựa đầu đồng bộ",
+    badge: "ĐỆM GHẾ GỖ ĐỒNG KỴ",
+    isFeatured: true,
+    image: "assets/images/mau-dem/dem-04-bo-dem-ghe-go-da-bo-kem-goi.jpg",
+    gallery: [
+      "assets/images/mau-dem/dem-04-bo-dem-ghe-go-da-bo-kem-goi.jpg"
+    ],
+    colors: [
+      { name: "Nâu Bò Vintage", hex: "#854d0e" },
+      { name: "Nâu Đỏ Cánh Gián", hex: "#7c2d12" },
+      { name: "Vàng Bò Sáng", hex: "#a16207" }
+    ],
+    description: "Mẫu đệm mút ghế gỗ truyền thống và ghế Đồng Kỵ được may đo tinh tế với tone da bò nâu cổ điển. Bộ sản phẩm gồm các khối đệm ngồi dày dặn kèm gối tựa lưng êm ái bảo vệ cột sống. Chất liệu da chống thấm nước, bền bỉ theo thời gian, tăng thêm vẻ đẹp quyền quý cho bộ bàn ghế gỗ phòng khách."
+  },
+  {
+    id: "dem-05-bo-dem-mut-da-nau-phang",
+    name: "Tập Hợp Đệm Mút Ghế Gỗ Phẳng Cắt May Theo Kích Thước Bọc Da Nâu",
+    code: "DEM-05",
+    category: "mau-dem",
+    categoryName: "Mẫu đệm",
+    subtitle: "Các tấm đệm mút phẳng vuông vắn may theo kích thước lòng ghế thực tế, khóa kéo ẩn tiện lợi",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "May đo theo quy cách thực tế: dày 5cm, 7cm, 9cm, 12cm hoặc 15cm",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Mút Việt Nhật nguyên tấm không chắp nối, cắt máy thẳng tắp",
+    cushion: "Đệm phẳng chống võng, vỏ bọc da bò nâu cao cấp may mí gân sắc cạnh, khóa kéo giấu mép",
+    badge: "MAY ĐO THEO YÊU CẦU",
+    isFeatured: true,
+    image: "assets/images/mau-dem/dem-05-bo-dem-mut-da-nau-phang.jpg",
+    gallery: [
+      "assets/images/mau-dem/dem-05-bo-dem-mut-da-nau-phang.jpg"
+    ],
+    colors: [
+      { name: "Nâu Da Bò", hex: "#9a3412" },
+      { name: "Nâu Socola", hex: "#451a03" },
+      { name: "Nâu Cà Phê", hex: "#38221b" }
+    ],
+    description: "Dòng đệm ngồi ghế gỗ gia công phẳng nguyên tấm, cắt theo đúng kích thước từng bộ ghế dài, ghế đơn và đôn của khách hàng. Mút D40 đúc nguyên khối chống xẹp lún với độ dày 5cm, 7cm, 9cm hoặc 12cm. Vỏ da cao cấp có khóa kéo ẩn dễ dàng tháo lắp vệ sinh và bảo dưỡng."
   }
 ];
 // Danh mục chuẩn theo ảnh user và yêu cầu

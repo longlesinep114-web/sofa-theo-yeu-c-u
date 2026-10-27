@@ -3,7 +3,7 @@ import os
 import sys
 
 PORT = 3000
-DIRECTORY = r"C:\Users\pc -klc\.gemini\antigravity\scratch\sofa-ankar-luxury"
+DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     os.chdir(DIRECTORY)
     server_address = ("", PORT)
     httpd = http.server.ThreadingHTTPServer(server_address, NoCacheHandler)
-    print(f"Serving at http://localhost:{PORT} with NO-CACHE headers")
+    print(f"Serving at http://localhost:{PORT} from {DIRECTORY}")
     sys.stdout.flush()
     try:
         httpd.serve_forever()
