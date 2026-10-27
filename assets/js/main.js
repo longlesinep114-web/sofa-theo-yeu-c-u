@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener("click", function(e) {
         e.stopPropagation();
         const pId = this.getAttribute("data-id");
-        openQuickViewModal(pId);
+        window.location.href = 'product-detail.html?id=' + pId;
       });
     });
   }

@@ -1,7 +1,142 @@
 // Database sản phẩm Sofa & Nội thất - XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅
 const SOFA_DATABASE = [
 
-  // 1. Sofa chữ L (Sofa góc) - 5 MẪU THỰC TẾ THEO ẢNH NGƯỜI DÙNG GỬI
+  // 1. Sofa chữ L (Sofa góc)
+  {
+    id: "sofa-l-catalogue-01-tuy-chon-mau",
+    name: "Tùy Chọn Mẫu - Sofa Chữ L 01",
+    code: "SOFA-L-CATALOGUE-01",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Bảng tổng hợp 16 mẫu sofa góc chữ L hiện đại bọc da bò và vải nỉ đa sắc màu may đo theo yêu cầu",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Sản xuất theo kích thước phòng khách: 2m6 - 3m6, góc L trái hoặc phải linh hoạt",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tẩm sấy công nghệ cao chống cong vênh, chịu tải trọng lớn",
+    cushion: "Mút Việt Nhật nguyên khối kết hợp lò xo cối đàn hồi cao, đệm ngồi êm ái chống xẹp lún",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-catalogue-01.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-catalogue-01.jpg"
+    ],
+    colors: [
+      { name: "Đa Dạng 16 Mẫu", hex: "#c25420" },
+      { name: "Vàng Bò Vintage", hex: "#b45309" },
+      { name: "Xanh Emerald", hex: "#047857" },
+      { name: "Ghi Xám", hex: "#6b7280" }
+    ],
+    description: "Bảng tổng hợp catalogue 16 mẫu sofa góc chữ L hiện đại đa dạng kiểu dáng từ dáng văng L tối giản, tay cuộn đến sofa góc chần múi sang trọng. Xưởng may đo chuẩn xác theo diện tích nhà phố, chung cư và biệt thự."
+  },
+  {
+    id: "sofa-l-catalogue-02-tuy-chon-mau",
+    name: "Tùy Chọn Mẫu - Sofa Chữ L 02",
+    code: "SOFA-L-CATALOGUE-02",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Bảng catalogue các mẫu sofa module ghép khối, sofa góc thông minh có hộc chứa đồ và đôn di động",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Module ghép khối linh hoạt theo diện tích: 2m4 x 1m8 đến 3m8 x 2m4",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ Tự Nhiên tẩm sấy công nghệ cao, kết cấu module chắc chắn dễ vận chuyển tháo lắp",
+    cushion: "Hệ đệm mút đúc D40 bọc vải nỉ nhung cao cấp, tựa lưng phồng bồng bềnh công thái học",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-catalogue-02.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-catalogue-02.jpg"
+    ],
+    colors: [
+      { name: "Đa Dạng Module", hex: "#c25420" },
+      { name: "Xanh Royal", hex: "#1d4ed8" },
+      { name: "Hồng Pastel", hex: "#f472b6" },
+      { name: "Xanh Cốm", hex: "#65a30d" }
+    ],
+    description: "Dòng sofa góc chữ L và chữ U thiết kế dạng khối module lắp ghép hiện đại. Có thể tùy chỉnh thành sofa góc trái, góc phải, tách thành ghế đơn hoặc ghép cùng đôn chứa đồ thông minh, đáp ứng mọi nhu cầu sinh hoạt gia đình."
+  },
+  {
+    id: "sofa-l-catalogue-03-tuy-chon-mau",
+    name: "Tùy Chọn Mẫu - Sofa Chữ L 03",
+    code: "SOFA-L-CATALOGUE-03",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Bộ sưu tập 12 mẫu sofa góc L hiện đại bọc vải nỉ Bỉ, vải dệt sợi Bắc Âu gam màu trung tính trang nhã",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Chiều dài 2m8 - 3m4 x Chiều sâu góc L 1m7 - 2m0 (May đo theo yêu cầu)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung gỗ Sồi / Thông tự nhiên kết hợp chân gỗ tiện hoặc chân bệt bọc da sang trọng",
+    cushion: "Mút Việt Nhật nguyên khối, đệm ngồi và đệm tựa tháo rời có khóa kéo dễ giặt vệ sinh",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-catalogue-03.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-catalogue-03.jpg"
+    ],
+    colors: [
+      { name: "12 Mẫu L Hiện Đại", hex: "#c25420" },
+      { name: "Kem Be Cát", hex: "#d6cbb8" },
+      { name: "Ghi Xám Khói", hex: "#9ca3af" },
+      { name: "Xám Than", hex: "#374151" }
+    ],
+    description: "Tổng hợp 12 phom dáng sofa góc chữ L mang phong cách Bắc Âu Scandinavian thanh lịch. Gam màu be, trắng kem, ghi xám trung tính hài hòa với mọi phong cách nội thất hiện đại của chung cư và nhà phố."
+  },
+  {
+    id: "sofa-l-catalogue-04-tuy-chon-mau",
+    name: "Tùy Chọn Mẫu - Sofa Chữ L 04",
+    code: "SOFA-L-CATALOGUE-04",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Bảng mẫu sofa góc chữ L và góc chữ U kích thước lớn dành cho phòng khách biệt thự, căn hộ penthouse",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Kích thước lớn 3m2 - 4m2 x góc chữ L/U sâu 1m8 - 2m4 (Gia công theo thiết kế)",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ Sồi chịu tải siêu bền, chân nẹp gỗ tự nhiên hoặc kim loại sơn tĩnh điện",
+    cushion: "Mút tỷ trọng cao D40 chống võng lún tuyệt đối, lớp lót lông vũ êm ái đàn hồi đa tầng",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-catalogue-04.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-catalogue-04.jpg"
+    ],
+    colors: [
+      { name: "Đa Dạng Góc L & U", hex: "#c25420" },
+      { name: "Nâu Da Bò", hex: "#854d0e" },
+      { name: "Xanh Sapphire", hex: "#1e3a8a" },
+      { name: "Xám Lông Chuột", hex: "#4b5563" }
+    ],
+    description: "Tuyển chọn 11 mẫu sofa góc L và sofa chữ U đôi (Double Chaise) bề thế, uy nghi. Thiết kế tối ưu không gian thư giãn cho cả đại gia đình, tạo điểm nhấn đẳng cấp vượt trội cho phòng khách diện tích rộng."
+  },
+  {
+    id: "sofa-l-catalogue-05-tuy-chon-mau",
+    name: "Tùy Chọn Mẫu - Sofa Chữ L 05",
+    code: "SOFA-L-CATALOGUE-05",
+    category: "sofa-chu-l",
+    categoryName: "Sofa chữ L (Sofa góc)",
+    subtitle: "Bảng tổng hợp 16 mẫu sofa góc thương hiệu cao cấp quốc tế (Anthropologie, West Elm, CB2, Crate & Barrel...)",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Đo đạc sản xuất chuẩn xác theo nguyên mẫu thiết kế Châu Âu và diện tích nhà bạn",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung gỗ tự nhiên tẩm sấy xuất khẩu, phụ kiện kim loại cao cấp nhập khẩu",
+    cushion: "Đệm mút Việt Nhật cao cấp đàn hồi tiêu chuẩn xuất khẩu, bọc chất liệu da/vải nỉ chọn lọc",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/sofa-l/sofa-l-catalogue-05.jpg",
+    gallery: [
+      "assets/images/sofa-l/sofa-l-catalogue-05.jpg"
+    ],
+    colors: [
+      { name: "16 Mẫu Quốc Tế", hex: "#c25420" },
+      { name: "Cam Đất Terracotta", hex: "#c2410c" },
+      { name: "Xanh Navy", hex: "#1e3a8a" },
+      { name: "Xanh Rêu Olive", hex: "#3f6212" }
+    ],
+    description: "Bảng catalogue 16 mẫu sofa góc chữ L nổi tiếng thế giới được xưởng đóng trực tiếp theo tỉ lệ chuẩn xác. Khách hàng dễ dàng lựa chọn mẫu thiết kế mình yêu thích để xưởng may đo với giá gốc tận xưởng không qua trung gian."
+  },
   {
     id: "sofa-l-02-chan-kim-kim",
     name: "Sofa Góc Chữ L Múi Xếp Ly Chân Nẹp Inox Mạ Vàng",
@@ -108,31 +243,34 @@ const SOFA_DATABASE = [
     ],
     description: "Thiết kế sofa góc L hiện đại công thái học hàng đầu cho phòng khách cao cấp. Phần tựa đầu gật gù điều chỉnh linh hoạt nhiều nấc giúp nâng đỡ cột sống cổ khi xem phim, đọc sách; góc L rộng rãi thoải mái cho cả gia đình quây quần."
   },
+
   {
-    id: "sofa-l-05-goc-l-kem-phoi-da-bo-tay-vat",
-    name: "Sofa Góc Chữ L Hiện Đại Phối 2 Màu Kem & Nâu Da Bò Tay Vát Loe",
+    id: "sofa-l-05-scandinavian-goc-l-ghi-xam",
+    name: "Sofa Góc Chữ L Bắc Âu Đệm Rời Chân Gỗ Sồi (Tùy Chọn 3 Màu)",
     code: "SOFA-L05",
     category: "sofa-chu-l",
     categoryName: "Sofa chữ L (Sofa góc)",
-    subtitle: "Phối màu tinh tế kem bơ & nâu bò, tay ghế vát loe cánh én thanh thoát, kèm gối tựa Houndstooth",
+    subtitle: "Thiết kế module góc L Bắc Âu phóng khoáng, tựa tay và đệm ngồi phồng êm ái: Tùy chọn Ghi Xám, Tím Thạch Anh hoặc Be Sữa",
     price: "Tư Vấn Báo Giá Tận Xưởng",
     originalPrice: "",
-    dimensions: "3400 x 1950 x 840 mm (Sản xuất theo kích thước thực tế)",
+    dimensions: "3200 x 1850 x 850 mm (May đo may theo kích thước phòng khách thực tế)",
     material: "Nỉ, Da nhân tạo và Da thật",
-    frame: "Khung Gỗ: Sồi, Thông, Keo sấy khô tẩm sấy chịu lực cao, chân kim loại sơn tĩnh điện chống xước",
-    cushion: "Hệ đệm mút Việt Nhật đàn hồi cao kết hợp lông vũ siêu êm ái, bồng bềnh tự nhiên",
-    badge: "PHỐI 2 MÀU Ý",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tẩm sấy công nghệ cao chống cong vênh mối mọt, chân gỗ tự nhiên thanh mảnh",
+    cushion: "Mút Việt Nhật nguyên khối kết hợp lông vũ siêu êm ái, bọc vải nỉ cao cấp dệt sợi thoáng khí",
+    badge: "BẮC ÂU THỜI THƯỢNG",
     isFeatured: true,
-    image: "assets/images/sofa-l/sofa-l-05-goc-l-kem-phoi-da-bo-tay-vat.jpg",
+    image: "assets/images/sofa-l/sofa-l-05-scandinavian-goc-l-ghi-xam.jpg",
     gallery: [
-      "assets/images/sofa-l/sofa-l-05-goc-l-kem-phoi-da-bo-tay-vat.jpg"
+      "assets/images/sofa-l/sofa-l-05-scandinavian-goc-l-ghi-xam.jpg",
+      "assets/images/sofa-l/sofa-l-05-scandinavian-goc-l-tim-thach-anh.jpg",
+      "assets/images/sofa-l/sofa-l-05-scandinavian-goc-l-be-sua.jpg"
     ],
     colors: [
-      { name: "Kem Phối Nâu Bò", hex: "#d8c4b6" },
-      { name: "Ghi Sáng Phối Xám Đen", hex: "#94a3b8" },
-      { name: "Cam Đất Phối Trắng Kem", hex: "#ea580c" }
+      { name: "Ghi Xám Tinh Tế", hex: "#9ca3af" },
+      { name: "Tím Thạch Anh", hex: "#7e4b78" },
+      { name: "Be Sữa / Sand", hex: "#d6cbb8" }
     ],
-    description: "Mẫu sofa góc chữ L mang ngôn ngữ thiết kế Italia sang trọng với đường tay vát loe dạng cánh én mở rộng không gian ngồi. Sự kết hợp đối lập hài hòa giữa đệm ngồi trắng kem mịn màng và viền khung bọc da bò nâu thời thượng tạo nên điểm nhấn kiến trúc ấn tượng cho phòng khách hiện đại."
+    description: "Kiệt tác sofa góc chữ L mang phong cách Bắc Âu Scandinavian thanh lịch và ấm cúng. Thiết kế đệm ngồi dày dặn bồng bềnh cùng hệ gối tựa lưng êm ái, nâng đỡ tối đa cơ thể khi nghỉ ngơi, đọc sách hoặc thư giãn cùng gia đình. Hệ khung nâng đỡ bằng gỗ sồi tự nhiên tinh tế, gầm ghế cao thoáng giúp không gian phòng khách luôn nhẹ nhàng, thanh thoát và dễ dàng vệ sinh."
   },
 
   {
@@ -1082,7 +1220,61 @@ const SOFA_DATABASE = [
   },
   
 
-  // 4. Ghế tân cổ điển (Bộ sưu tập 5 mẫu may đo tân cổ điển sang trọng tại xưởng)
+  // 4. Ghế tân cổ điển
+  {
+    id: "sofa-tc-16-tuy-chon-mau-chesterfield",
+    name: "Tùy Chọn Mẫu - Sofa Tân Cổ Điển Chesterfield May Đo",
+    code: "SOFA-TC16",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Bảng tổng hợp các kiểu dáng và sắc màu sofa tân cổ điển Chesterfield may đo theo yêu cầu",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "May đo theo kích thước văng đơn, văng đôi, văng 3 hoặc văng 4 chỗ thực tế",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ: Sồi, Thông, Keo tẩm sấy công nghệ cao chịu lực chống cong vênh, mối mọt",
+    cushion: "Mút Việt Nhật đàn hồi cao kết hợp lò xo cối cao cấp, rút cúc quả trám thủ công sâu nét",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-16-tuy-chon-mau.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-16-tuy-chon-mau.jpg"
+    ],
+    colors: [
+      { name: "Đa Dạng Tùy Chọn", hex: "#c25420" },
+      { name: "Xanh Emerald", hex: "#047857" },
+      { name: "Đỏ Rượu Vang", hex: "#991b1b" },
+      { name: "Nâu Da Bò", hex: "#78350f" }
+    ],
+    description: "Bảng tổng hợp tuyển chọn các mẫu sofa tân cổ điển Chesterfield hoàng gia được xưởng gia công trực tiếp. Quý khách hàng có thể tùy chọn phom dáng tay cuộn tròn quý tộc, chất liệu da bò thật hoặc vải nhung tuyết mịn, đóng đinh tán đồng viền tay thủ công sắc nét."
+  },
+  {
+    id: "sofa-tc-17-tuy-chon-mau-tan-co-dien",
+    name: "Tùy Chọn Mẫu - Sofa Tân Cổ Điển & Đương Đại Thiết Kế",
+    code: "SOFA-TC17",
+    category: "ghe-tan-co-dien",
+    categoryName: "Ghế tân cổ điển",
+    subtitle: "Bộ sưu tập các thiết kế sofa tân cổ điển rút múi dọc, rút cúc quả trám và viền sò may đo theo yêu cầu",
+    price: "Tư Vấn Báo Giá Tận Xưởng",
+    originalPrice: "",
+    dimensions: "Sản xuất kích thước văng dài 1m8 - 2m8 hoặc góc L theo diện tích phòng khách",
+    material: "Nỉ, Da nhân tạo và Da thật",
+    frame: "Khung Gỗ Tự Nhiên đã xử lý tẩm sấy tiêu chuẩn, chân kim loại mạ PVD vàng hoặc chân gỗ tiện",
+    cushion: "Mút D40 Việt Nhật nguyên tấm chống xẹp lún, bọc vải nỉ nhung cao cấp mềm mượt",
+    badge: "TÙY CHỌN MẪU",
+    isFeatured: true,
+    image: "assets/images/ghe-tan-co-dien/sofa-tc-17-tuy-chon-mau.jpg",
+    gallery: [
+      "assets/images/ghe-tan-co-dien/sofa-tc-17-tuy-chon-mau.jpg"
+    ],
+    colors: [
+      { name: "Đa Dạng Kiểu Dáng", hex: "#c25420" },
+      { name: "Hồng / Cam Pastel", hex: "#f472b6" },
+      { name: "Xanh Teal / Ngọc", hex: "#0d9488" },
+      { name: "Xanh Cobalt", hex: "#1d4ed8" }
+    ],
+    description: "Bộ sưu tập các mẫu sofa tân cổ điển phong cách Châu Âu hiện đại với các đường may rút múi chần bông công phu, tạo khối phồng êm ái. Xưởng nhận may đo chuẩn xác theo từng căn hộ biệt thự, penthouse và phòng khách cao cấp."
+  },
   {
     id: "ghe-tan-co-dien-chesterfield-don-da-nau",
     name: "Ghế Đơn Tân Cổ Điển Chesterfield Da Bò Cổ Điển",

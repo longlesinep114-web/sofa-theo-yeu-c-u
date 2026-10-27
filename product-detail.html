@@ -342,72 +342,151 @@
 
   <div class="ankar-toast" id="ankarToast">Thông báo</div>
 
-  <script src="assets/js/data.js?v=1793109019"></script>
+  <script src="assets/js/data.js"></script>
   <script>
+    let currentProduct = null;
+    let currentGallery = [];
+    let currentGalleryIndex = 0;
+
+    function handlePageExit(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      if (currentProduct && currentProduct.category) {
+        window.location.href = "index.html#" + currentProduct.category;
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+
+    function updateDetailHero(idx) {
+      if (!currentGallery.length) return;
+      currentGalleryIndex = (idx + currentGallery.length) % currentGallery.length;
+      const hero = document.getElementById("detailHeroImage");
+      if (hero) {
+        hero.style.opacity = "0.5";
+        setTimeout(() => {
+          hero.src = currentGallery[currentGalleryIndex];
+          hero.style.opacity = "1";
+        }, 80);
+      }
+      document.querySelectorAll(".pdetail-thumb").forEach((t, i) => {
+        if (i === currentGalleryIndex) t.classList.add("active");
+        else t.classList.remove("active");
+      });
+      const badge = document.getElementById("galleryIndexBadge");
+      if (badge) badge.innerText = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
+
+      // Đồng bộ chip màu tương ứng nếu có
+      if (currentProduct && currentProduct.colors) {
+        let matchIdx = currentGalleryIndex;
+        if (currentProduct.colors[matchIdx]) {
+          const currentColorName = document.getElementById("currentColorName");
+          if (currentColorName) currentColorName.innerText = currentProduct.colors[matchIdx].name;
+          document.querySelectorAll(".color-chip-btn").forEach((btn, i) => {
+            if (i === matchIdx) {
+              btn.style.borderColor = "var(--accent-orange)";
+              btn.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.2)";
+            } else {
+              btn.style.borderColor = "#e2e8f0";
+              btn.style.boxShadow = "none";
+            }
+          });
+        }
+      }
+    }
+
+    function selectDetailColor(colorIdx) {
+      if (!currentProduct || !currentProduct.colors || !currentProduct.colors[colorIdx]) return;
+      const c = currentProduct.colors[colorIdx];
+      const currentColorName = document.getElementById("currentColorName");
+      if (currentColorName) currentColorName.innerText = c.name;
+
+      document.querySelectorAll(".color-chip-btn").forEach((btn, i) => {
+        if (i === colorIdx) {
+          btn.style.borderColor = "var(--accent-orange)";
+          btn.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.2)";
+        } else {
+          btn.style.borderColor = "#e2e8f0";
+          btn.style.boxShadow = "none";
+        }
+      });
+
+      if (currentGallery[colorIdx]) {
+        updateDetailHero(colorIdx);
+      }
+    }
+
+    function changeDetailImage(el, src) {
+      const idx = currentGallery.indexOf(src);
+      if (idx !== -1) updateDetailHero(idx);
+      else {
+        const hero = document.getElementById("detailHeroImage");
+        if (hero) hero.src = src;
+        document.querySelectorAll(".pdetail-thumb").forEach(t => t.classList.remove("active"));
+        if (el) el.classList.add("active");
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
       try {
         const urlParams = new URLSearchParams(window.location.search);
-        const prodId = urlParams.get('id') || "ghe-thu-gian-luon-song-cong-thai-hoc";
+        const prodId = urlParams.get('id');
 
         if (typeof SOFA_DATABASE === "undefined" || !SOFA_DATABASE.length) {
           console.error("SOFA_DATABASE is not loaded.");
           return;
         }
 
-        const product = SOFA_DATABASE.find(p => p.id === prodId) || SOFA_DATABASE[0];
-        if (!product) return;
+        currentProduct = SOFA_DATABASE.find(p => p.id === prodId) || SOFA_DATABASE[0];
+        if (!currentProduct) return;
 
-        document.title = `${product.name} | XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅`;
-
-        const catEl = document.getElementById("breadcrumbCategory");
-        if (catEl && product.categoryName) catEl.innerText = product.categoryName.toUpperCase();
-
-        const currEl = document.getElementById("breadcrumbCurrent");
-        if (currEl && product.name) currEl.innerText = product.name.toUpperCase();
+        document.title = `${currentProduct.name} | XƯỞNG SẢN XUẤT 🇻🇳 SOFA ✅`;
 
         const titleEl = document.getElementById("detailTitle");
-        if (titleEl) titleEl.innerText = product.name;
+        if (titleEl) titleEl.innerText = currentProduct.name;
 
         const codeEl = document.getElementById("detailCode");
-        if (codeEl) codeEl.innerText = `// ${product.code}`;
+        if (codeEl) codeEl.innerText = `// ${currentProduct.code}`;
 
         const badgeEl = document.getElementById("detailBadge");
-        if (badgeEl) badgeEl.innerText = product.badge;
+        if (badgeEl) badgeEl.innerText = currentProduct.badge;
+
+        currentGallery = (currentProduct.gallery && currentProduct.gallery.length) ? currentProduct.gallery : [currentProduct.image];
+        currentGalleryIndex = 0;
 
         const heroImg = document.getElementById("detailHeroImage");
         if (heroImg) {
-          heroImg.src = product.image;
-          heroImg.alt = product.name;
+          heroImg.src = currentGallery[0];
+          heroImg.alt = currentProduct.name;
         }
 
         const dimEl = document.getElementById("tableDimensions");
-        if (dimEl) dimEl.innerText = product.dimensions;
+        if (dimEl) dimEl.innerText = currentProduct.dimensions;
 
         const frameEl = document.getElementById("tableFrame");
-        if (frameEl) frameEl.innerText = product.frame;
+        if (frameEl) frameEl.innerText = currentProduct.frame;
 
         const cushionEl = document.getElementById("tableCushion");
-        if (cushionEl) cushionEl.innerText = product.cushion;
+        if (cushionEl) cushionEl.innerText = currentProduct.cushion;
 
         const matEl = document.getElementById("tableMaterial");
-        if (matEl) matEl.innerText = product.material;
+        if (matEl) matEl.innerText = currentProduct.material;
 
         const zaloBtn = document.getElementById("zaloPrimaryBtn");
         if (zaloBtn) {
           zaloBtn.href = "https://zalo.me/0985451396";
-          zaloBtn.title = `Tư Vấn Zalo: ${product.name}`;
+          zaloBtn.title = `Tư Vấn Zalo: ${currentProduct.name}`;
         }
 
-                // Hiển thị bộ chọn màu sắc tương tác
+        // Hiển thị bộ chọn màu sắc tương tác
         const colorsWrapper = document.getElementById("detailColorsWrapper");
         const colorsList = document.getElementById("detailColorsList");
         const currentColorName = document.getElementById("currentColorName");
 
-        if (product.colors && product.colors.length > 0) {
+        if (currentProduct.colors && currentProduct.colors.length > 0) {
           if (colorsWrapper) colorsWrapper.style.display = "block";
-          if (currentColorName) currentColorName.innerText = product.colors[0].name;
+          if (currentColorName) currentColorName.innerText = currentProduct.colors[0].name;
           if (colorsList) {
-            colorsList.innerHTML = product.colors.map((c, i) => `
+            colorsList.innerHTML = currentProduct.colors.map((c, i) => `
               <button type="button" class="color-chip-btn ${i === 0 ? 'active' : ''}" 
                 data-idx="${i}" 
                 onclick="selectDetailColor(${i})" 
@@ -427,9 +506,6 @@
         const nextArrow = document.getElementById("detailNextArrow");
         const indexBadge = document.getElementById("galleryIndexBadge");
 
-        currentGallery = (product.gallery && product.gallery.length) ? product.gallery : [product.image];
-        currentGalleryIndex = 0;
-
         if (currentGallery.length > 1) {
           if (prevArrow) prevArrow.style.display = "flex";
           if (nextArrow) nextArrow.style.display = "flex";
@@ -446,136 +522,53 @@
         if (thumbsContainer) {
           thumbsContainer.innerHTML = currentGallery.map((imgUrl, idx) => `
             <div class="pdetail-thumb ${idx === 0 ? 'active' : ''}" onclick="changeDetailImage(this, '${imgUrl}')">
-              <img src="${imgUrl}" alt="${product.name}">
+              <img src="${imgUrl}" alt="${currentProduct.name}">
             </div>
           `).join("");
+        }
+
+        // Swipe & Navigation Events
+        const galleryMain = document.getElementById("pdetailGalleryMain");
+        if (galleryMain) {
+          let touchStartX = 0;
+          let touchEndX = 0;
+          galleryMain.addEventListener("touchstart", e => {
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+          galleryMain.addEventListener("touchend", e => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 40) {
+              if (diff > 0) updateDetailHero(currentGalleryIndex + 1);
+              else updateDetailHero(currentGalleryIndex - 1);
+            }
+          }, { passive: true });
+
+          if (heroImg) {
+            heroImg.addEventListener("click", () => {
+              if (currentGallery.length > 1) {
+                updateDetailHero(currentGalleryIndex + 1);
+              }
+            });
+          }
+        }
+
+        if (prevArrow) {
+          prevArrow.addEventListener("click", e => {
+            e.stopPropagation();
+            updateDetailHero(currentGalleryIndex - 1);
+          });
+        }
+        if (nextArrow) {
+          nextArrow.addEventListener("click", e => {
+            e.stopPropagation();
+            updateDetailHero(currentGalleryIndex + 1);
+          });
         }
       } catch (err) {
         console.error("Error loading product detail:", err);
       }
     });
-
-    let currentGallery = [];
-    let currentGalleryIndex = 0;
-
-    function updateDetailHero(idx) {
-      if (!currentGallery.length) return;
-      currentGalleryIndex = (idx + currentGallery.length) % currentGallery.length;
-      const hero = document.getElementById("detailHeroImage");
-      if (hero) {
-        hero.style.opacity = "0.5";
-        setTimeout(() => {
-          hero.src = currentGallery[currentGalleryIndex];
-          hero.style.opacity = "1";
-        }, 90);
-      }
-      document.querySelectorAll(".pdetail-thumb").forEach((t, i) => {
-        if (i === currentGalleryIndex) t.classList.add("active");
-        else t.classList.remove("active");
-      });
-      const badge = document.getElementById("galleryIndexBadge");
-      if (badge) badge.innerText = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
-
-      // Đồng bộ chip màu tương ứng nếu có
-      const currentUrl = currentGallery[currentGalleryIndex];
-      const p = (typeof SOFA_DATABASE !== "undefined") ? SOFA_DATABASE.find(item => item.id === productId) : null;
-      if (p && p.colors) {
-        let matchIdx = p.colors.findIndex(c => c.image === currentUrl);
-        if (matchIdx === -1 && p.colors[currentGalleryIndex]) matchIdx = currentGalleryIndex;
-        if (matchIdx !== -1) {
-          const currentColorName = document.getElementById("currentColorName");
-          if (currentColorName && p.colors[matchIdx]) currentColorName.innerText = p.colors[matchIdx].name;
-          document.querySelectorAll(".color-chip-btn").forEach((btn, i) => {
-            if (i === matchIdx) {
-              btn.style.borderColor = "var(--accent-orange)";
-              btn.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.2)";
-            } else {
-              btn.style.borderColor = "#e2e8f0";
-              btn.style.boxShadow = "none";
-            }
-          });
-        }
-      }
-    }
-
-    function selectDetailColor(colorIdx) {
-      const p = (typeof SOFA_DATABASE !== "undefined") ? SOFA_DATABASE.find(item => item.id === productId) : null;
-      if (!p || !p.colors || !p.colors[colorIdx]) return;
-      const c = p.colors[colorIdx];
-      const currentColorName = document.getElementById("currentColorName");
-      if (currentColorName) currentColorName.innerText = c.name;
-
-      document.querySelectorAll(".color-chip-btn").forEach((btn, i) => {
-        if (i === colorIdx) {
-          btn.style.borderColor = "var(--accent-orange)";
-          btn.style.boxShadow = "0 0 0 2px rgba(194,84,32,0.2)";
-        } else {
-          btn.style.borderColor = "#e2e8f0";
-          btn.style.boxShadow = "none";
-        }
-      });
-
-      if (c.image && currentGallery.includes(c.image)) {
-        updateDetailHero(currentGallery.indexOf(c.image));
-      } else if (currentGallery[colorIdx]) {
-        updateDetailHero(colorIdx);
-      }
-    }
-
-    function changeDetailImage(el, src) {
-      const idx = currentGallery.indexOf(src);
-      if (idx !== -1) updateDetailHero(idx);
-      else {
-        const hero = document.getElementById("detailHeroImage");
-        if (hero) hero.src = src;
-        document.querySelectorAll(".pdetail-thumb").forEach(t => t.classList.remove("active"));
-        if (el) el.classList.add("active");
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const galleryMain = document.getElementById("pdetailGalleryMain");
-      if (galleryMain) {
-        let touchStartX = 0;
-        let touchEndX = 0;
-        galleryMain.addEventListener("touchstart", e => {
-          touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        galleryMain.addEventListener("touchend", e => {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 40) {
-            if (diff > 0) updateDetailHero(currentGalleryIndex + 1);
-            else updateDetailHero(currentGalleryIndex - 1);
-          }
-        }, { passive: true });
-
-        const heroImg = document.getElementById("detailHeroImage");
-        if (heroImg) {
-          heroImg.addEventListener("click", () => {
-            if (currentGallery.length > 1) {
-              updateDetailHero(currentGalleryIndex + 1);
-            }
-          });
-        }
-      }
-
-      const prevBtn = document.getElementById("detailPrevArrow");
-      const nextBtn = document.getElementById("detailNextArrow");
-      if (prevBtn) {
-        prevBtn.addEventListener("click", e => {
-          e.stopPropagation();
-          updateDetailHero(currentGalleryIndex - 1);
-        });
-      }
-      if (nextBtn) {
-        nextBtn.addEventListener("click", e => {
-          e.stopPropagation();
-          updateDetailHero(currentGalleryIndex + 1);
-        });
-      }
-    });
   </script>
-  <script src="assets/js/main.js?v=1793109019"></script>
 </body>
 </html>
